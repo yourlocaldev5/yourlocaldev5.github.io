@@ -1,0 +1,2059 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>YourLocal_DEV's Website Development</title>
+<meta name="description" content="Custom websites for Roblox ERLC servers. Build your own quote from $5 to $20, paid in Robux or USD. Order over DM.">
+<meta name="theme-color" content="#13213B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="YourLocal_DEV's Website Development">
+<meta property="og:description" content="Custom websites for Roblox ERLC servers. Build your own quote from $5 to $20, paid in Robux or USD. Order over DM.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 54 54'%3E%3Crect width='54' height='54' rx='12' fill='%2313213B'/%3E%3Cg transform='translate%285 -1.7%29'%3E%3Cpath d='M22 8L38 14V27C38 38 31 45.5 22 49.5C13 45.5 6 38 6 27V14Z' fill='%23fff'/%3E%3Cpath d='M17 20L10.5 27L17 34M27 20L33.5 27L27 34M24.5 18L19.5 36' fill='none' stroke='%2313213B' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<style id="app-style">/* Look: a tall dark header with two rows of links and an accent call-to-action block, a pale notice strip, a dark hero,
+   a three-link band, dark page-header bands with an accent rule, bordered white cards on an off-white page, condensed
+   uppercase headings, rectangular buttons, numbered steps and an accent side card. Colour is kept to two hues per theme:
+   a dark colour and one accent, plus pale neutral tints. One committed light look; each season swaps the two colours and
+   adds an ornament plus falling particles. */
+:root{color-scheme:light;--font-head:"Barlow Condensed","Arial Narrow",Arial,sans-serif;--font-body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--ok:#007A55;--warn:#A15C00;--bad:#B42318;--infobg:#EFF6FF;--infoink:#162456;--dark:#13213B;--darker:#0C1628;--dark2:#1C2E4F;--gold:#46B4FF;--gold2:#6CC4FF;--sage:#C5D3E8;--banner:#E2EBF7;--page:#F5F7FB;--soft:#EDF2FA;--ink:#0C1628;--muted:#465770;--mdark:#93A8C8;--dline:#2B4064;--ongold:#08111F;--goldtext:#0B63B0;--fx1:#46B4FF;--fx2:#C5D3E8;--fx3:#93A8C8}
+:root[data-season="halloween"]{--dark:#22132F;--darker:#150B20;--dark2:#2E1A40;--gold:#FF7A1A;--gold2:#FF9440;--sage:#DCCFE8;--banner:#EEE5F5;--page:#F8F5F2;--soft:#F3EEF7;--ink:#150B20;--muted:#5B4A6B;--mdark:#B3A0C9;--dline:#3F2A57;--ongold:#150B20;--goldtext:#A34400;--fx1:#9B6BFF;--fx2:#FF7A1A;--fx3:#FFC24D}
+:root[data-season="fall"]{--dark:#33221A;--darker:#22150F;--dark2:#432C21;--gold:#E8A33D;--gold2:#F2B552;--sage:#E0CFBA;--banner:#F2E7D6;--page:#FAF5EC;--soft:#F5ECDD;--ink:#22150F;--muted:#6A5444;--mdark:#C3A98F;--dline:#513A2C;--ongold:#22150F;--goldtext:#8A5200;--fx1:#E8590C;--fx2:#F2B134;--fx3:#B5476B}
+:root[data-season="christmas"]{--dark:#7A1626;--darker:#4F0E19;--dark2:#85202F;--gold:#E3B23C;--gold2:#F0C453;--sage:#E8CFCF;--banner:#F6E0E0;--page:#FBF6F0;--soft:#F9EEEA;--ink:#3A0C14;--muted:#6B4B4F;--mdark:#E8B7BD;--dline:#94303F;--ongold:#3A0C14;--goldtext:#865A00;--fx1:#A9C7EE;--fx2:#FFFFFF;--fx3:#E3B23C}
+:root[data-season="spring"]{--dark:#0D4A56;--darker:#08343D;--dark2:#135D6B;--gold:#FFCB3D;--gold2:#FFD966;--sage:#C8E2E4;--banner:#E0F0F1;--page:#F3FAFA;--soft:#E8F5F5;--ink:#08343D;--muted:#3F6068;--mdark:#A6D3D8;--dline:#1B6676;--ongold:#08343D;--goldtext:#7A5B00;--fx1:#FF6FA5;--fx2:#FFB300;--fx3:#38BDF8}
+:root{
+  --wrap:1320px;--gut:16px;--stick:12px;
+  --ondark:color-mix(in srgb,#fff 82%,var(--dark));
+  --field:color-mix(in srgb,var(--ink) 48%,#fff);
+}
+@media (min-width:720px){:root{--gut:28px}}
+@media (min-width:1100px){:root{--gut:36px}}
+@media (max-width:1040px){:root{--stick:78px}}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--page);color:var(--ink);font:400 17px/1.6 var(--font-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--darker);z-index:60}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0}
+a{color:inherit}
+img,svg{max-width:100%}
+button{font:inherit;color:inherit}
+i,em{font-style:normal}
+code,pre{font-family:var(--font-mono)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hdr :focus-visible,.hero :focus-visible,.ctaband :focus-visible,.ftr :focus-visible,.lband :focus-visible,.phead :focus-visible{outline-color:#fff}
+::selection{background:var(--gold);color:var(--ongold)}
+
+.wrap{width:100%;max-width:calc(var(--wrap) + 2 * var(--gut));margin-inline:auto;padding-left:max(var(--gut),env(safe-area-inset-left,0px));padding-right:max(var(--gut),env(safe-area-inset-right,0px))}
+.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--ongold);padding:.6rem 1rem;z-index:100;font-weight:700}
+.skip:focus{left:8px;top:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#fx{position:fixed;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.ico{width:1.15em;height:1.15em;flex:none}
+
+/* ---------- utilities */
+.stack{display:grid;gap:10px;align-content:start}
+.stack-lg{display:grid;gap:28px;align-content:start}
+.stack-sm{display:grid;gap:4px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.row.between{justify-content:space-between}
+.muted{color:var(--muted)}
+.small{font-size:15px}
+.mono{font-family:var(--font-mono)}
+.grow{flex:1;min-width:0}
+.more{margin-top:22px;font-weight:700}
+.more a{display:inline-flex;gap:8px;align-items:center;text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:2px}
+.k,.hk{font:700 12px/1.2 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--goldtext)}
+.hk{color:var(--muted)}
+.eyebrow{font:700 13px/1.2 var(--font-body);letter-spacing:.18em;text-transform:uppercase;color:var(--goldtext)}
+.lede{font-size:clamp(17px,1.5vw,20px);color:var(--muted);max-width:62ch}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;background:var(--gold);color:var(--ongold);font:700 13px/1.3 var(--font-body);letter-spacing:.02em;border-radius:2px;white-space:nowrap}
+.chip.ok{background:var(--soft);color:var(--ok);box-shadow:inset 0 0 0 1px var(--sage)}
+.chip.hot{background:var(--dark);color:#fff}
+
+/* ---------- buttons: rectangular, condensed, uppercase */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 24px;border:2px solid var(--ink);border-radius:0;background:transparent;color:var(--ink);font:700 18px/1 var(--font-head);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s;text-align:center}
+.btn:hover{background:var(--ink);color:#fff}
+.btn .ico{width:18px;height:18px}
+.btn.primary{background:var(--gold);border-color:var(--gold);color:var(--ongold)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ongold)}
+.btn.dark{background:var(--dark);border-color:var(--dark);color:#fff}
+.btn.dark:hover{background:var(--darker);border-color:var(--darker)}
+.btn.ghost{border-color:#fff;color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--dark)}
+.btn.sm{min-height:38px;padding:0 16px;font-size:15px}
+.btn.lg{min-height:58px;padding:0 34px;font-size:22px}
+.btn.block{display:flex;width:100%}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn:disabled:hover{background:transparent;color:var(--ink)}
+.btn.primary:disabled:hover{background:var(--gold);color:var(--ongold)}
+
+/* ---------- header: tall, two rows, accent call-to-action block */
+.hdr{background:var(--dark);color:#fff;border-bottom:3px solid var(--gold);position:relative;z-index:50}
+.hdr-in{display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-rows:44px 84px;align-items:stretch}
+.brand{grid-column:1;grid-row:1 / span 2;display:flex;align-items:center;gap:16px;padding:10px 40px 12px 0;color:#fff;text-decoration:none;min-width:0}
+.brand svg.logo{width:88px;height:88px;flex:none;color:#fff}
+.bname{display:grid;gap:5px;line-height:1;min-width:0}
+.b1{font:700 30px/1 var(--font-head);letter-spacing:.015em}
+.b2{font:700 13px/1 var(--font-body);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.nav{display:contents}
+.nav a{color:#fff;text-decoration:none;font:700 15px/1 var(--font-body);letter-spacing:.07em;text-transform:uppercase;position:relative;display:flex;align-items:center}
+.nav a:hover{color:var(--gold)}
+.nav-util{grid-column:2;grid-row:1;display:flex;align-items:center;gap:32px;border-bottom:1px solid var(--dline)}
+.nav-main{grid-column:2;grid-row:2;display:flex;align-items:stretch;gap:6px;padding-bottom:12px}
+.nav-main a{padding:0 20px 4px}
+.nav-main a:first-child{padding-left:0}
+.nav a[aria-current="page"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--gold)}
+.nav-util a[aria-current="page"]::after{bottom:-1px}
+.nav-adm{display:none!important}
+.hdr-tag{grid-column:3;grid-row:1;display:flex;align-items:center;justify-content:flex-end;padding-left:28px;border-bottom:1px solid var(--dline);font:700 13px/1 var(--font-body);letter-spacing:.22em;text-transform:uppercase;color:var(--mdark);white-space:nowrap}
+.hdr-r{grid-column:3;grid-row:2;display:flex;align-items:stretch;gap:22px;padding-bottom:12px}
+.uchip{display:flex;align-items:center;gap:12px;align-self:center;color:#fff;text-decoration:none;position:relative}
+.uav{width:42px;height:42px;border-radius:50%;background:var(--dark2);border:2px solid var(--dline);display:grid;place-items:center;flex:none}
+.uav svg{width:24px;height:24px}
+.un{font:700 18px/1 var(--font-body);letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.ub{font:700 12px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:var(--ongold);padding:5px 8px;border-radius:2px}
+.uchip>.ico{width:16px;height:16px;color:var(--ondark)}
+.uchip:hover .un{color:var(--gold)}
+.uchip.dirty .uav{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold)}
+.hcta{display:flex;align-items:center;justify-content:center;gap:10px;padding:0 32px;background:var(--gold);color:var(--ongold);font:700 21px/1 var(--font-head);letter-spacing:.11em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.hcta:hover{background:var(--gold2)}
+.hcta .ico{display:none;width:20px;height:20px}
+.menu-btn{display:none;width:46px;height:46px;border:1px solid var(--dline);background:transparent;color:#fff;cursor:pointer;place-items:center;border-radius:0}
+.menu-btn .ico{width:24px;height:24px}
+
+/* ---------- notice strip */
+.banner{background:var(--banner);color:var(--ink);border-bottom:1px solid var(--sage)}
+.banner .wrap{display:flex;align-items:center;gap:16px;padding-block:11px}
+.banner .ico{width:20px;height:20px}
+.banner p{flex:1;text-align:center;font:600 15px/1.5 var(--font-body)}
+.banner .ico+p{margin-right:36px}
+
+/* ---------- hero */
+.hero{position:relative;overflow:hidden;isolation:isolate;color:#fff;background:radial-gradient(ellipse 90% 100% at 50% 0%,var(--dark2) 0%,var(--dark) 52%,var(--darker) 100%)}
+.hero-bg{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.hero-bg .grid{position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px) 0 0/64px 64px,linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px) 0 0/64px 64px;-webkit-mask:radial-gradient(ellipse 70% 80% at 50% 45%,#000 20%,transparent 78%);mask:radial-gradient(ellipse 70% 80% at 50% 45%,#000 20%,transparent 78%)}
+.hero-bg .wm{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#fff;opacity:.055;line-height:0}
+.hero-bg .wm svg{width:min(640px,86vw);height:auto}
+.orn{position:absolute;inset:0;pointer-events:none;z-index:0}
+.hero-in{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding-block:clamp(52px,6.5vw,92px) clamp(48px,6vw,84px)}
+.hero h1{font:800 clamp(46px,7vw,100px)/.98 var(--font-head);text-transform:uppercase;letter-spacing:.005em;max-width:20ch;text-wrap:balance}
+.hero h1 em{color:var(--gold);display:block}
+.hero .lede{color:var(--ondark);max-width:58ch;font-size:clamp(18px,1.7vw,22px);line-height:1.5}
+.status{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--dline);background:rgba(0,0,0,.22);font:700 13px/1 var(--font-body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.sdot{width:9px;height:9px;border-radius:50%;background:#3CE08F;animation:ping 2.2s ease-out infinite}
+.status.off{color:var(--ondark)}
+.status.off .sdot{background:#E5484D;animation:none}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+.facts{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 30px;margin-top:18px;color:var(--ondark);font-weight:600;font-size:16px}
+.facts li{display:flex;align-items:center;gap:8px}
+.facts .ico{color:var(--gold);width:18px;height:18px}
+.hero.xmas .hero-in{padding-top:clamp(96px,12vw,170px)}
+
+.moon{position:absolute;right:6%;top:26px;width:clamp(56px,9vw,120px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 32%,#FFF4D6,#F5B94D 72%);box-shadow:0 0 90px 26px rgba(255,150,40,.32)}
+.moon::before,.moon::after{content:"";position:absolute;border-radius:50%;background:rgba(190,120,20,.28)}
+.moon::before{width:18%;aspect-ratio:1;left:54%;top:26%}
+.moon::after{width:12%;aspect-ratio:1;left:30%;top:58%}
+.autumn-sun{position:absolute;left:-80px;top:14%;width:560px;max-width:90vw;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--gold) 0%,transparent 66%);opacity:.26}
+.sun{position:absolute;right:6%;top:-20px;width:clamp(90px,14vw,180px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--gold) 0 38%,transparent 39%)}
+.sun::before{content:"";position:absolute;inset:-34%;border-radius:50%;background:repeating-conic-gradient(var(--gold) 0 4deg,transparent 4deg 18deg);opacity:.5;-webkit-mask:radial-gradient(circle,transparent 30%,#000 31%,#000 58%,transparent 59%);mask:radial-gradient(circle,transparent 30%,#000 31%,#000 58%,transparent 59%);animation:spin 80s linear infinite}
+.lights{position:absolute;left:0;right:0;top:0;height:54px}
+.lights svg{position:absolute;inset:0;width:100%;height:100%}
+.lights svg path{fill:none;stroke:rgba(255,255,255,.6);stroke-width:2;vector-effect:non-scaling-stroke}
+.lights i{position:absolute;width:12px;height:16px;margin-left:-6px;border-radius:50% 50% 55% 55%;background:var(--c);box-shadow:0 0 14px 3px var(--c);animation:tw 2.6s ease-in-out infinite;animation-delay:var(--d)}
+
+/* ---------- link band under the hero */
+.lband{background:var(--darker);border-top:3px solid var(--gold);color:#fff}
+.lband-in{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.lcard{display:block;padding:34px 36px 38px;color:#fff;text-decoration:none;border-left:1px solid var(--dline)}
+.lcard:first-child{border-left:0;padding-left:0}
+.lt{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.lt h3{font:700 clamp(30px,3vw,46px)/1 var(--font-head);text-transform:uppercase}
+.lt .ico{width:28px;height:28px;transition:transform .15s,color .15s}
+.lcard p{margin-top:10px;color:var(--ondark);font-size:19px;line-height:1.45}
+.lcard:hover .lt .ico{transform:translateX(5px);color:var(--gold)}
+.lcard:hover h3{color:var(--gold)}
+
+/* ---------- page header band */
+.phead{background:var(--dark);color:#fff;border-bottom:3px solid var(--gold)}
+.phead-in{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-block:clamp(34px,5vw,62px)}
+.phead h1{font:800 clamp(42px,5.6vw,74px)/1 var(--font-head);text-transform:uppercase;letter-spacing:.005em}
+.phead .lede{color:var(--ondark);font-size:clamp(17px,1.6vw,22px);margin-top:4px}
+.phead .eyebrow{color:var(--gold)}
+.phead-r{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ---------- sections */
+.sec{padding-block:clamp(40px,6vw,76px)}
+.sec.tight{padding-block:clamp(24px,3.4vw,42px)}
+.sec.adm-sec{padding-block:clamp(28px,4vw,48px) clamp(48px,6vw,80px)}
+.sec-head{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:flex-end;justify-content:space-between;margin-bottom:30px}
+.sec-head h2,.sband h2,.cta h2{font:800 clamp(34px,4.6vw,58px)/1 var(--font-head);text-transform:uppercase;letter-spacing:.005em}
+.sec-head .stack{gap:8px}
+
+/* ---------- cards */
+.card{background:#fff;border:1px solid var(--sage);border-radius:2px;padding:24px}
+.cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.feat{display:flex;flex-direction:column;gap:10px;transition:border-color .15s}
+.feat:hover{border-color:var(--dark)}
+.feat-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.tile{width:50px;height:50px;background:var(--dark);color:var(--gold);display:grid;place-items:center;border-radius:2px;flex:none}
+.tile .ico{width:26px;height:26px}
+.feat h3,.know h3,.empty h3{font:800 27px/1.05 var(--font-head);text-transform:uppercase;margin-top:6px}
+.feat p{font-size:17px}
+
+/* ---------- numbered steps + accent card */
+.split-steps{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,430px);gap:clamp(32px,6vw,84px);align-items:start}
+.steps{list-style:none;display:grid}
+.steps li{position:relative;display:grid;grid-template-columns:50px minmax(0,1fr);gap:24px;padding-bottom:32px}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{content:"";position:absolute;left:24px;top:58px;bottom:8px;width:3px;background:var(--sage)}
+.steps li:last-child::before{display:none}
+.num{width:50px;height:50px;border-radius:50%;background:var(--dark);color:#fff;font:700 24px/1 var(--font-head);display:grid;place-items:center}
+.sbody h3{font:700 27px/1.1 var(--font-head);text-transform:uppercase;margin:8px 0 6px}
+.sbody p{max-width:56ch}
+.sticky{position:sticky;top:var(--stick)}
+.gcard{background:var(--gold);color:var(--ongold);padding:30px;border-radius:2px;display:grid;gap:14px;align-content:start}
+.gcard h3{font:800 clamp(30px,2.8vw,40px)/1 var(--font-head);text-transform:uppercase}
+.gcard p{font-size:18px;line-height:1.45}
+.gcard .small{font-size:15px}
+.plist{list-style:none;display:grid;gap:9px;margin:2px 0 4px}
+.plist li{display:flex;align-items:baseline;gap:8px;font-weight:600;font-size:17px}
+.plist .dots{flex:1;min-width:12px;border-bottom:2px dotted color-mix(in srgb,var(--ongold) 45%,transparent);transform:translateY(-4px)}
+.plist b{font-weight:700;white-space:nowrap}
+.pmax{font-size:15px!important}
+.gcard .btn{border-color:var(--ongold);color:var(--ongold)}
+.gcard .btn:hover{background:var(--ongold);color:#fff}
+.gcard .btn.dark{background:var(--dark);border-color:var(--dark);color:#fff}
+.gcard .btn.dark:hover{background:var(--darker);border-color:var(--darker)}
+
+/* ---------- seasons band */
+.sband{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:32px;align-items:center;background:#fff;border:1px solid var(--sage);padding:clamp(24px,3vw,40px)}
+.sband h2{font-size:clamp(30px,3.6vw,46px)}
+.schips{display:flex;flex-wrap:wrap;gap:10px}
+.schip{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 16px;border:1px solid var(--sage);background:var(--page);font:700 16px/1 var(--font-body);cursor:pointer;border-radius:2px}
+.schip:hover{border-color:var(--dark)}
+.schip[aria-pressed="true"]{background:var(--dark);border-color:var(--dark);color:#fff}
+.sw{display:inline-flex}
+.sw i{width:15px;height:15px;border-radius:50%;margin-left:-5px;box-shadow:0 0 0 1.5px #fff}
+.sw i:first-child{margin-left:0}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr));gap:16px}
+.stile{display:grid;align-content:start;gap:6px;text-align:left;cursor:pointer;padding:0;overflow:hidden;font:inherit}
+.stile b{font:800 24px/1.1 var(--font-head);text-transform:uppercase;padding:10px 18px 0}
+.stile .d{padding:0 18px 18px;color:var(--muted);font-size:16px;line-height:1.4}
+.stile:hover{border-color:var(--dark)}
+.stile[aria-pressed="true"]{border-color:var(--dark);box-shadow:inset 0 0 0 2px var(--dark)}
+.band-sw{display:flex;height:46px}
+.band-sw i{flex:1}
+
+/* ---------- FAQ */
+.faq{background:#fff;border:1px solid var(--sage)}
+.faq details{border-top:1px solid var(--sage)}
+.faq details:first-child{border-top:0}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 24px;font:700 20px/1.3 var(--font-body)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{background:var(--soft)}
+.faq summary .ico{width:22px;height:22px;transition:transform .2s}
+.faq details[open] summary{background:var(--soft)}
+.faq details[open] summary .ico{transform:rotate(180deg)}
+.ans{padding:6px 24px 24px;max-width:78ch;color:var(--muted);font-size:18px}
+
+/* ---------- call-to-action band */
+.ctaband{background:var(--dark);color:#fff;border-top:3px solid var(--gold)}
+.cta{display:flex;justify-content:space-between;align-items:center;gap:28px 40px;flex-wrap:wrap;padding-block:clamp(40px,6vw,72px)}
+.cta .stack{gap:10px}
+.cta .lede{color:var(--ondark)}
+.cta-r{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.cta-r .small{color:var(--ondark);width:100%}
+
+/* ---------- footer */
+.ftr{background:var(--darker);color:#fff;border-top:3px solid var(--gold)}
+.ftr-grid{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:clamp(28px,5vw,64px);padding-block:48px 36px}
+.ftr .brand{padding:0}
+.ftr .brand svg.logo{width:60px;height:60px}
+.ftr .b1{font-size:24px}
+.ftr .b2{font-size:11px}
+.ftr h4{font:700 20px/1 var(--font-head);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.ftr ul{list-style:none;display:grid;gap:8px}
+.ftr a{text-decoration:none}
+.ftr li a:hover{color:var(--gold)}
+.fmuted{color:var(--mdark)}
+.ftr .btn{border-color:#fff;color:#fff}
+.ftr .btn:hover{background:#fff;color:var(--dark)}
+.legal{border-top:1px solid var(--dline);padding-block:20px 28px;color:var(--mdark);font-size:15px}
+.copyline{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.copyline code{font:500 15px/1.4 var(--font-mono);background:var(--soft);border:1px solid var(--sage);padding:7px 10px;color:var(--ink);word-break:break-all}
+.ftr .copyline code{background:var(--dark2);border-color:var(--dline);color:#fff}
+
+/* ---------- forms */
+input[type=text],input[type=email],input[type=url],input[type=number],select,textarea{width:100%;font:400 17px/1.4 var(--font-body);color:var(--ink);background:#fff;border:1px solid var(--field);border-radius:0;padding:12px 14px;min-height:50px}
+textarea{resize:vertical;line-height:1.5}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--gold);outline-offset:0;border-color:var(--dark)}
+.f{display:grid;gap:6px;font-weight:700;align-content:start}
+.hint{font-weight:400;color:var(--muted);font-size:15px;line-height:1.45}
+fieldset{border:1px solid var(--sage);padding:14px 16px}
+legend{font-weight:700;padding-inline:6px}
+.checks{display:flex;flex-wrap:wrap;gap:8px 18px}
+.checks label{display:flex;gap:8px;align-items:center}
+
+/* ---------- white cards with a soft header band */
+.pcard{background:#fff;border:1px solid var(--sage);border-radius:2px;min-width:0}
+.pcard>header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:17px 24px;background:var(--soft);border-bottom:1px solid var(--sage)}
+.pcard>header h3{font:800 28px/1 var(--font-head);text-transform:uppercase;letter-spacing:.005em;display:flex;align-items:center;gap:14px}
+.qn{width:34px;height:34px;border-radius:50%;background:var(--dark);color:#fff;font:700 19px/1 var(--font-head);display:grid;place-items:center;flex:none}
+.pbody{padding:24px;display:grid;gap:14px;align-content:start}
+.pintro{padding:18px 24px;color:var(--muted);border-bottom:1px solid var(--sage)}
+.opts{display:grid}
+.opt{display:flex;align-items:center;gap:16px;padding:17px 24px;border-top:1px solid var(--sage);cursor:pointer;position:relative}
+.opts>.opt:first-child{border-top:0}
+.opt input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--dark);cursor:pointer}
+.opt .grow{display:grid;gap:2px}
+.opt b{font-weight:700;font-size:19px;line-height:1.3}
+.opt .muted{line-height:1.4}
+.opt .p{font:700 24px/1 var(--font-head);letter-spacing:.02em;white-space:nowrap}
+.opt:has(input:checked){background:var(--soft);box-shadow:inset 5px 0 0 var(--gold)}
+.opt:hover{background:var(--soft)}
+.opt:focus-within{outline:3px solid var(--gold);outline-offset:-3px}
+
+/* ---------- quote builder */
+.builder{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,420px);gap:clamp(28px,4vw,52px);align-items:start}
+.qside{display:grid;gap:20px;align-content:start}
+.quote .total{font:800 clamp(58px,6vw,80px)/.95 var(--font-head);letter-spacing:.005em}
+.quote .tsub{font:600 15px/1.3 var(--font-mono);margin-top:-6px}
+.quote dl{display:grid;border-top:1px solid color-mix(in srgb,var(--ongold) 30%,transparent);margin-top:6px}
+.quote dl>div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid color-mix(in srgb,var(--ongold) 30%,transparent)}
+.quote dt{font-weight:600}
+.quote dd{font-weight:700;text-align:right}
+.qbtns{display:grid;gap:10px;margin-top:4px}
+.know{display:grid;gap:12px;align-content:start}
+.know p{color:var(--muted);font-size:18px;line-height:1.5}
+@media (min-width:1041px) and (min-height:880px){.qside{position:sticky;top:var(--stick)}}
+
+/* ---------- contact */
+.cols2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px}
+.cols2.cc{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),600px))}
+.cols2.four{grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))}
+.handle{font:800 clamp(30px,3.4vw,44px)/1.05 var(--font-head);overflow-wrap:anywhere}
+.ccard.todo{border-style:dashed;border-color:var(--dark)}
+.msgbox pre{font:500 15px/1.65 var(--font-mono);background:var(--soft);border:1px solid var(--sage);padding:16px 18px;white-space:pre-wrap;overflow-wrap:anywhere}
+
+/* ---------- gallery */
+.gal-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,390px);gap:clamp(28px,4vw,52px);align-items:start}
+.feed{display:grid;gap:24px;align-content:start;min-width:0}
+.post{padding:0;overflow:hidden}
+.post>header{display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--soft);border-bottom:1px solid var(--sage)}
+.av{width:44px;height:44px;border-radius:50%;background:var(--dark);color:#fff;display:grid;place-items:center;flex:none}
+.av svg{width:26px;height:26px}
+.who{display:grid;flex:1;min-width:0}
+.who b{font:700 21px/1.1 var(--font-head);letter-spacing:.02em}
+.post .pbody{padding:20px}
+.cap{white-space:pre-wrap;overflow-wrap:anywhere}
+.pimgs{display:grid;gap:8px}
+.pimgs.n2,.pimgs.n3,.pimgs.n4{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pimg{padding:0;border:1px solid var(--sage);background:#fff;cursor:zoom-in;display:block;overflow:hidden;line-height:0}
+.pimg img{display:block;width:100%;height:auto}
+.pimgs.n2 .pimg img,.pimgs.n3 .pimg img,.pimgs.n4 .pimg img{aspect-ratio:16/10;object-fit:cover}
+.pimg:hover{border-color:var(--dark)}
+.composer{display:grid;gap:14px}
+.composer h3,.agroup>h3,.agroup>.row.between h3{font:800 28px/1 var(--font-head);text-transform:uppercase}
+.thumbs{display:flex;gap:10px;flex-wrap:wrap}
+.thumb{position:relative;width:96px;height:96px;border:1px solid var(--sage)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb button{position:absolute;top:4px;right:4px;width:28px;height:28px;border:0;background:var(--dark);color:#fff;display:grid;place-items:center;cursor:pointer}
+.thumb button .ico{width:14px;height:14px}
+.empty{display:grid;justify-items:start;gap:12px;padding:32px}
+.gthumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:20px}
+.gthumb{display:block;padding:0;overflow:hidden;text-decoration:none;position:relative}
+.gthumb img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.gthumb:hover{border-color:var(--dark)}
+.gcap{display:block;padding:12px 16px;font-weight:600;font-size:16px;border-top:1px solid var(--sage)}
+.card.todo{border:1px dashed var(--dark);background:var(--soft);display:grid;gap:10px;justify-items:start}
+.card.todo h3{font:800 26px/1.05 var(--font-head);text-transform:uppercase}
+
+/* ---------- lightbox, toast, notice */
+.lb{position:fixed;inset:0;z-index:100;display:grid;grid-template-rows:minmax(0,1fr) auto;background:color-mix(in srgb,var(--darker) 96%,transparent);color:#fff;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb-stage{display:grid;place-items:center;min-height:0;padding-top:2.5rem}
+.lb-stage img{max-width:100%;max-height:calc(100dvh - 10rem);object-fit:contain;border:1px solid var(--dline);background:#fff}
+.round{width:46px;height:46px;display:grid;place-items:center;border:2px solid #fff;background:rgba(0,0,0,.45);color:#fff;cursor:pointer;border-radius:0}
+.round:hover{background:#fff;color:var(--dark)}
+.lb-x{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px))}
+.lb-b{position:absolute;top:50%;transform:translateY(-50%)}
+.lb-b.prev{left:calc(10px + env(safe-area-inset-left,0px))}
+.lb-b.next{right:calc(10px + env(safe-area-inset-right,0px))}
+.lb-cap{text-align:center;padding:.8rem;color:var(--ondark);display:grid;gap:.3rem;max-width:70ch;margin-inline:auto}
+.lb-cap p{color:#fff}
+.lb-n{font:500 .85rem var(--font-mono)}
+.notice{padding:16px 20px;background:var(--infobg);border:1px solid #BFD3F2;border-left:6px solid var(--infoink);color:var(--infoink);font-size:16px}
+.notice.bad{background:#FEF2F0;border-color:#F3C2BC;border-left-color:var(--bad);color:#7A1A12}
+.toast{position:fixed;z-index:110;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:max-content;max-width:calc(100vw - 32px);background:var(--darker);color:#fff;border-left:5px solid var(--gold);padding:13px 20px;font-weight:600;font-size:16px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+
+/* ---------- season pill */
+.spill{position:fixed;z-index:75;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:grid;justify-items:end;gap:10px}
+.spill>button{display:flex;align-items:center;gap:10px;min-height:46px;padding:0 18px;border:2px solid var(--gold);border-radius:0;background:var(--darker);color:#fff;font:700 17px/1 var(--font-head);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.spill>button:hover{background:var(--dark2)}
+.spill .dot{width:14px;height:14px;border-radius:50%;background:conic-gradient(var(--gold) 0 33%,var(--sage) 0 66%,var(--mdark) 0)}
+.spill .menu{width:min(300px,calc(100vw - 32px));padding:6px;border:1px solid var(--sage);background:#fff;box-shadow:0 12px 32px rgba(0,0,0,.28);display:grid}
+.spill .menu p{font-size:14px;color:var(--muted);padding:8px 10px 10px}
+.spill .menu button{display:flex;align-items:center;gap:12px;text-align:left;padding:12px 10px;border:0;border-left:4px solid transparent;background:none;color:var(--ink);font:600 17px var(--font-body);cursor:pointer}
+.spill .menu button:hover{background:var(--soft)}
+.spill .menu button[aria-pressed="true"]{background:var(--soft);border-left-color:var(--gold)}
+
+/* ---------- admin */
+.adm{display:grid;grid-template-columns:290px minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:start}
+.atabs{display:grid;gap:2px;position:sticky;top:var(--stick)}
+.glabel{font:800 25px/1 var(--font-head);text-transform:uppercase;padding:0 14px;margin:26px 0 8px}
+.glabel:first-child{margin-top:0}
+.atabs button{text-align:left;padding:13px 14px;border:0;border-radius:2px;background:none;color:var(--ink);font:500 18px/1.3 var(--font-body);cursor:pointer}
+.atabs button:hover{background:var(--soft)}
+.atabs button[aria-current="page"]{background:var(--dark2);color:#fff;font-weight:600}
+.amain{min-width:0}
+.ahead h1{font:800 clamp(42px,5vw,62px)/1 var(--font-head);text-transform:uppercase}
+.ahead .lede{max-width:60ch}
+.pubbar{position:sticky;top:var(--stick);z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px 20px;flex-wrap:wrap;background:#fff;border:1px solid var(--sage);border-left:6px solid var(--sage);padding:14px 18px}
+.pubbar.dirty{border-left-color:var(--gold);background:color-mix(in srgb,var(--gold) 12%,#fff)}
+.agroup{background:#fff;border:1px solid var(--sage);padding:24px;display:grid;gap:16px;align-content:start;min-width:0}
+.agroup>h3:first-child,.agroup>.row.between:first-child{margin:-24px -24px 4px;padding:16px 24px;background:var(--soft);border-bottom:1px solid var(--sage)}
+.agroup .composer{padding:0;border:0}
+.agroup .opt{padding-inline:0;border-top:0}
+.agroup .opt:has(input:checked){box-shadow:none;background:none}
+.agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
+.apane{display:grid;gap:24px;align-content:start;min-width:0}
+.litem{border:1px solid var(--sage);background:var(--page);padding:16px;display:grid;gap:12px}
+.litem>header{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.litem>header b{overflow-wrap:anywhere}
+.mini{display:flex;gap:6px;flex:none}
+.mini button,.delbtn{min-width:38px;height:38px;border:1px solid var(--sage);background:#fff;display:grid;place-items:center;cursor:pointer;color:var(--ink);padding:0 8px;font-weight:700;font-size:14px;border-radius:0}
+.mini button:hover:not(:disabled),.delbtn:hover{border-color:var(--dark)}
+.mini button:disabled{opacity:.35;cursor:not-allowed}
+.mini .ico,.delbtn .ico{width:18px;height:18px}
+.delbtn.armed{background:var(--bad);border-color:var(--bad);color:#fff}
+.scards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:16px}
+.scard{display:grid;gap:12px;align-content:start;padding:0;overflow:hidden}
+.scard>div,.scard>.row{padding-inline:16px}
+.scard>.row{padding-bottom:16px}
+.scard.live{border-color:var(--dark);box-shadow:inset 0 0 0 2px var(--dark)}
+.checklist ul{list-style:none}
+.checklist li{display:flex;align-items:flex-start;gap:16px;padding:20px 24px;border-top:1px solid var(--sage)}
+.checklist li:first-child{border-top:0}
+.cmark{width:28px;height:28px;border-radius:50%;border:2px solid var(--muted);flex:none;display:grid;place-items:center;margin-top:1px}
+.cmark .ico{width:16px;height:16px;stroke-width:2.6}
+.checklist .done .cmark{border-color:var(--ok);color:var(--ok)}
+.cbody{flex:1;min-width:0;display:grid;gap:2px}
+.cbody b{font-size:20px;font-weight:600;line-height:1.3}
+.cbody .muted{line-height:1.45}
+.checklist .done .cbody b{text-decoration:line-through}
+.olist{padding-left:1.4rem;display:grid;gap:6px}
+.tscroll{overflow-x:auto}
+.roles{width:100%;border-collapse:collapse;font-size:16px;min-width:520px}
+.roles th,.roles td{text-align:left;padding:10px 12px;border:1px solid var(--sage);vertical-align:top}
+.roles th{background:var(--soft);font-weight:700}
+.locked{max-width:640px;display:grid;gap:14px;justify-items:start;padding-block:24px}
+.locked h1{font:800 clamp(40px,5vw,60px)/1 var(--font-head);text-transform:uppercase}
+
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(60,224,143,.7)}80%,100%{box-shadow:0 0 0 8px transparent}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.45}}
+
+/* ---------- tablet and phone */
+@media (max-width:1040px){
+  .cards3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hdr{position:sticky;top:env(safe-area-inset-top,0px)}
+  .hdr-in{display:flex;align-items:center;gap:12px;min-height:66px}
+  .brand{flex:1;padding:8px 0;gap:12px}
+  .brand svg.logo{width:50px;height:50px}
+  .b1{font-size:23px}
+  .b2{font-size:11px;letter-spacing:.18em}
+  .hdr-tag,.uchip{display:none}
+  .hdr-r{padding:0;gap:10px;align-items:center}
+  .hcta{min-height:44px;padding:0 16px;font-size:18px}
+  .hcta .ico{display:block}
+  .hcta .more{display:none}
+  .menu-btn{display:grid}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--darker);border-bottom:3px solid var(--gold);padding:8px max(var(--gut),env(safe-area-inset-right,0px)) 14px max(var(--gut),env(safe-area-inset-left,0px));box-shadow:0 16px 32px rgba(0,0,0,.35)}
+  .nav.open{display:flex;flex-direction:column}
+  .nav-main,.nav-util{display:contents}
+  .nav a,.nav-main a,.nav-main a:first-child{padding:16px 4px;border-bottom:1px solid var(--dline);font-size:17px}
+  .nav a[aria-current="page"]{color:var(--gold)}
+  .nav a[aria-current="page"]::after{display:none}
+  .nav-adm{display:flex!important;color:var(--gold)!important}
+  .nav-adm.dirty::after{content:"";display:block;position:static;width:9px;height:9px;border-radius:50%;background:var(--gold);margin-left:10px}
+  .lband-in{grid-template-columns:1fr}
+  .lcard,.lcard:first-child{padding:24px 0;border-left:0;border-top:1px solid var(--dline)}
+  .lcard:first-child{border-top:0}
+  .split-steps,.builder,.gal-split,.adm{grid-template-columns:1fr}
+  .sticky{position:static}
+  .sband{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+  .ftr-grid>:first-child{grid-column:1 / -1}
+  .atabs{position:static;display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+  .atabs button{white-space:nowrap;border:1px solid var(--sage);background:#fff}
+  .glabel{display:none}
+  .banner p{text-align:left}
+  .banner .ico+p{margin-right:0}
+  .banner .wrap{align-items:flex-start}
+}
+@media (max-width:640px){.cards3{grid-template-columns:1fr}}
+@media (max-width:560px){.moon{top:8px;right:12px;width:42px;box-shadow:0 0 36px 10px rgba(255,150,40,.3)}.sun{right:-24px;top:-30px;width:96px}}
+@media (max-width:560px){
+  body{font-size:16.5px}
+  .hcta{display:none}
+  .ftr-grid{grid-template-columns:1fr}
+  .ctas .btn,.cta-r .btn,.phead-r .btn{width:100%}
+  .phead-r{width:100%}
+  .btn.lg{min-height:54px;padding:0 22px;font-size:20px}
+  .pcard>header,.pbody,.pintro,.opt{padding-inline:18px}
+  .opt{gap:12px}
+  .gcard{padding:24px}
+  .steps li{grid-template-columns:44px minmax(0,1fr);gap:16px}
+  .num{width:44px;height:44px;font-size:21px}
+  .steps li::before{left:21px;top:52px}
+  .checklist li{flex-wrap:wrap;padding-inline:18px}
+  .checklist .cbody{flex:1 1 calc(100% - 50px)}
+  .checklist li .btn{margin-left:44px}
+  .spill>button .pn{display:none}
+  .faq summary{padding-inline:18px;font-size:18px}
+  .ans{padding-inline:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<script type="application/json" id="site-data">
+{
+  "v": 3,
+  "brand": {
+    "name": "YourLocal_DEV's Website Development",
+    "tag": "Websites for ERLC communities",
+    "open": true
+  },
+  "contact": {
+    "email": "yourlocaldev5@gmail.com",
+    "discordName": "",
+    "discordUrl": "",
+    "note": "All sales happen over DM. Send me a message on Discord or email and I will reply with a quote."
+  },
+  "season": {
+    "live": "regular",
+    "fx": false
+  },
+  "pricing": {
+    "min": 5,
+    "max": 20,
+    "base": 5,
+    "robuxPerUsd": 100
+  },
+  "payments": {
+    "robux": "Pay in Robux. I confirm the exact Robux amount and how to send it before you pay anything.",
+    "usd": "Pay in USD. I confirm the payment options and the exact total before you pay anything."
+  },
+  "domains": [
+    {
+      "name": "Free domain",
+      "price": "Free",
+      "blurb": "A free address so your site is online right away. A good start for new communities."
+    },
+    {
+      "name": "Paid domain",
+      "price": "Separate fee",
+      "blurb": "A custom address like yourserver.com. You buy it from a registrar, it is not part of my price, and I help you connect it to your site."
+    }
+  ],
+  "seasons": {
+    "regular": {
+      "pill": "Now taking orders",
+      "heroTitle": "Websites for your",
+      "heroAccent": "ERLC server.",
+      "heroSub": "Department sites with applications, tickets, reports, staff rosters and an admin panel you control. Build your own quote from {min} to {max}, paid in Robux or USD."
+    },
+    "halloween": {
+      "pill": "Halloween theme is on",
+      "heroTitle": "Give your ERLC server a",
+      "heroAccent": "Halloween makeover.",
+      "heroSub": "Bats, pumpkin orange and moonlight for your whole community site, switched on with one click. Back to normal when the month is over."
+    },
+    "fall": {
+      "pill": "Fall theme is on",
+      "heroTitle": "Fall patrol season needs a",
+      "heroAccent": "better website.",
+      "heroSub": "Warm colors and drifting leaves for every page of your community site, switched on with one click."
+    },
+    "christmas": {
+      "pill": "Christmas theme is on",
+      "heroTitle": "Gift your community a",
+      "heroAccent": "holiday-ready website.",
+      "heroSub": "Snow, string lights and festive colors on every page, then back to your normal look with one click."
+    },
+    "spring": {
+      "pill": "Spring / Summer theme is on",
+      "heroTitle": "Start the new season with a",
+      "heroAccent": "fresh website.",
+      "heroSub": "Deep teal, drifting petals and sunshine yellow for your community site. One click on, one click off."
+    }
+  },
+  "copy": {
+    "banner": "Orders happen over DM. Message me on Discord or email for a quote. A paid domain is billed separately by the registrar.",
+    "servicesTitle": "Everything your server needs",
+    "servicesSub": "Every site starts with a home page, rules and Discord links. Add the tools your staff actually use.",
+    "quoteTitle": "Build your own quote",
+    "quoteSub": "Start at {min}, tick only what you need and watch the price update. No site costs more than {max}. A paid domain is billed separately by the registrar.",
+    "teaserTitle": "Only pay for what you need",
+    "teaserSub": "Every site starts at {min}. Add features one by one. Even with every feature on, it never goes over {max}.",
+    "processTitle": "How it works",
+    "processSub": "From first DM to launch, in five steps.",
+    "seasonsTitle": "Make it festive",
+    "seasonsSub": "One click turns your whole site Halloween, Fall, Christmas or Spring/Summer. Try a look on this page right now.",
+    "galleryTitle": "Website gallery",
+    "gallerySub": "Pictures of sites I have built, posted as I finish them.",
+    "faqTitle": "Questions people ask",
+    "faqSub": "Not here? Send me a DM and I will answer.",
+    "contactTitle": "DM me to order",
+    "contactSub": "Sales happen over DM. Message me on Discord or email, tell me what you need, and I will send you a quote.",
+    "ctaTitle": "Ready to put your server online?",
+    "ctaSub": "Build a quote in a minute, then send me a DM. No site costs more than {max}.",
+    "footer": "Independent web developer. Not affiliated with Roblox or the ERLC game."
+  },
+  "features": [
+    {
+      "icon": "home",
+      "title": "Home and rules pages",
+      "body": "Your logo, banner, mission, rules and procedures in clean, easy-to-read pages.",
+      "addon": ""
+    },
+    {
+      "icon": "chat",
+      "title": "Discord links",
+      "body": "Join buttons and links that send people straight to your Discord server.",
+      "addon": ""
+    },
+    {
+      "icon": "users",
+      "title": "Staff roster",
+      "body": "Ranks, callsigns and status, easy to update as people get promoted.",
+      "addon": "roster"
+    },
+    {
+      "icon": "clipboard",
+      "title": "Application forms",
+      "body": "Staff and member applications with the questions you choose.",
+      "addon": "apps"
+    },
+    {
+      "icon": "ticket",
+      "title": "Ticket system",
+      "body": "Support, appeal and staff-report tickets with status tracking.",
+      "addon": "tickets"
+    },
+    {
+      "icon": "doc",
+      "title": "Report forms",
+      "body": "Incident, arrest, traffic and EMS report forms your team can fill in.",
+      "addon": "reports"
+    },
+    {
+      "icon": "shield",
+      "title": "Admin panel and roles",
+      "body": "Edit your own content. Only people you add get admin access.",
+      "addon": "admin"
+    },
+    {
+      "icon": "sparkle",
+      "title": "Seasonal themes",
+      "body": "Halloween, Fall, Christmas and Spring/Summer looks, switched with one click.",
+      "addon": "seasons"
+    },
+    {
+      "icon": "globe",
+      "title": "Domain setup",
+      "body": "I help you set up a free domain or connect a paid one.",
+      "addon": ""
+    }
+  ],
+  "addons": [
+    {
+      "id": "roster",
+      "name": "Staff roster and ranks",
+      "price": 2,
+      "blurb": "A roster page with ranks, callsigns and status."
+    },
+    {
+      "id": "apps",
+      "name": "Application forms",
+      "price": 2,
+      "blurb": "Staff and member applications with your own questions."
+    },
+    {
+      "id": "tickets",
+      "name": "Ticket system",
+      "price": 3,
+      "blurb": "Support, appeal and staff-report tickets with status tracking."
+    },
+    {
+      "id": "reports",
+      "name": "Report forms",
+      "price": 3,
+      "blurb": "Incident, arrest, traffic or EMS report forms for your team."
+    },
+    {
+      "id": "admin",
+      "name": "Admin panel and roles",
+      "price": 3,
+      "blurb": "Edit your own content. Only people you add get admin access."
+    },
+    {
+      "id": "seasons",
+      "name": "Seasonal themes",
+      "price": 2,
+      "blurb": "Halloween, Fall, Christmas and Spring/Summer looks with one click."
+    }
+  ],
+  "process": [
+    {
+      "title": "Send me a DM",
+      "body": "Message me on Discord or email. Tell me your server name, the features you want and any colors or logos."
+    },
+    {
+      "title": "Get your quote",
+      "body": "I reply with the exact price. It is never more than {max}, and a paid domain is billed separately. I ask if you want to pay in Robux or USD."
+    },
+    {
+      "title": "Confirm and pay",
+      "body": "I give you the exact amount and how to pay before you send anything."
+    },
+    {
+      "title": "I build your site",
+      "body": "I build your pages, forms and admin tools, then send you a link to review."
+    },
+    {
+      "title": "Launch",
+      "body": "I set up your free or paid domain and hand your site over to you."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What kinds of communities do you build for?",
+      "a": "Police, sheriff and state patrol departments, fire and EMS, DOT, dispatch and general community servers for ERLC, plus anything else you need."
+    },
+    {
+      "q": "How much does a website cost?",
+      "a": "Every site starts at {min} and you add only the features you need. The most any site costs is {max}, with every feature included. Use the Build a Quote page to see your exact price."
+    },
+    {
+      "q": "Does the price include a domain?",
+      "a": "A free domain costs nothing extra. If you want a paid domain like yourserver.com, you buy it from a registrar, so it is not part of my {max} maximum. I help you connect it."
+    },
+    {
+      "q": "How do I order?",
+      "a": "Send me a DM on Discord or email {email}. There is no order form. I reply with a quote and we go from there."
+    },
+    {
+      "q": "Can I pay in Robux?",
+      "a": "Yes. I take Robux and USD. I confirm the exact amount and how to pay before you send anything."
+    },
+    {
+      "q": "Can my staff edit the site?",
+      "a": "Builds with the admin panel add-on let you edit text, rosters and announcements yourself. Only people you add get admin access, so nobody can sign up for it."
+    },
+    {
+      "q": "Where can I see your work?",
+      "a": "Open the Gallery page. I post pictures of the websites I build there."
+    },
+    {
+      "q": "Are you part of Roblox or the ERLC game?",
+      "a": "No. I am an independent web developer. I build websites for communities that play ERLC."
+    }
+  ],
+  "posts": []
+}
+</script>
+<!--
+  HOW TO EDIT THIS SITE BY HAND
+  Everything the site says (contact details, prices, FAQ, season, gallery) is in the block called
+  site-data, near the top of this file. Open this file in any text editor, use Find (Ctrl+F) to jump to what
+  you want to change, change only the words between the quote marks, save, and upload the file to
+  your host again.
+  Useful ones to search for:  discordName (your Discord username), discordUrl (optional profile link,
+  must start with https://), live (the look everyone sees: regular, halloween, fall, christmas or spring).
+-->
+<div id="app"></div>
+<noscript><p style="padding:24px;font:18px system-ui,sans-serif">This site needs JavaScript. To order, email yourlocaldev5@gmail.com.</p></noscript>
+<script id="app-script">'use strict';
+(()=>{
+// ======================================================================
+// core: helpers, state, season, router shell
+// ======================================================================
+const META = {"seasons":[{"id":"regular","label":"Regular","desc":"Midnight navy with one sky-blue accent.","dots":["#13213B","#46B4FF","#C5D3E8"],"bg":"#F5F7FB"},{"id":"halloween","label":"Halloween","desc":"Midnight purple with pumpkin orange and bats.","dots":["#22132F","#FF7A1A","#DCCFE8"],"bg":"#F8F5F2"},{"id":"fall","label":"Fall","desc":"Espresso brown with amber and drifting leaves.","dots":["#33221A","#E8A33D","#E0CFBA"],"bg":"#FAF5EC"},{"id":"christmas","label":"Christmas","desc":"Holly red with gold and snowfall.","dots":["#7A1626","#E3B23C","#E8CFCF"],"bg":"#FBF6F0"},{"id":"spring","label":"Spring / Summer","desc":"Deep teal with sunshine yellow and petals.","dots":["#0D4A56","#FFCB3D","#C8E2E4"],"bg":"#F3FAFA"}]};
+const SEASON_IDS = META.seasons.map(s => s.id);
+const FONT_URL = 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap';
+const DEFAULT_RESET = ':root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}';
+const RESET_CSS = `:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}`;
+const DRAFT_KEY = 'yld-draft3';
+const SVG_NS = 'http://www.w3.org/2000/svg';
+
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+function h(tag, attrs, ...kids) {
+  const el = document.createElement(tag);
+  let val = null;
+  if (attrs) {
+    for (const k in attrs) {
+      const v = attrs[k];
+      if (v == null || v === false) continue;
+      if (k === 'class') el.className = v;
+      else if (k === 'text') el.textContent = v;
+      else if (k === 'value') val = v;
+      else if (k === 'style' && typeof v === 'object') {
+        for (const p in v) { if (p.slice(0, 2) === '--') el.style.setProperty(p, v[p]); else el.style[p] = v[p]; }
+      }
+      else if (k.slice(0, 2) === 'on' && typeof v === 'function') el.addEventListener(k.slice(2), v);
+      else if (v === true) el.setAttribute(k, '');
+      else el.setAttribute(k, v);
+    }
+  }
+  add(el, kids);
+  if (val !== null) el.value = val;
+  return el;
+}
+function add(el, kids) {
+  for (const k of kids.flat(Infinity)) {
+    if (k == null || k === false) continue;
+    el.append(k.nodeType ? k : document.createTextNode(String(k)));
+  }
+  return el;
+}
+
+const ICONS = {
+  check: '<path d="M4 10.5l4 4 8-9"/>',
+  arrow: '<path d="M4 10h12M11 5l5 5-5 5"/>',
+  copy: '<rect x="7" y="7" width="9" height="9" rx="1.5"/><path d="M13 7V5.5A1.5 1.5 0 0 0 11.5 4h-6A1.5 1.5 0 0 0 4 5.5v6A1.5 1.5 0 0 0 5.5 13H7"/>',
+  mail: '<rect x="3" y="5" width="14" height="10" rx="1.5"/><path d="M3.5 6l6.5 5 6.5-5"/>',
+  chat: '<path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h9A1.5 1.5 0 0 1 16 5.5v6a1.5 1.5 0 0 1-1.5 1.5H9l-3.5 3v-3A1.5 1.5 0 0 1 4 11.5z"/>',
+  menu: '<path d="M3 6h14M3 10h14M3 14h14"/>',
+  close: '<path d="M5 5l10 10M15 5L5 15"/>',
+  plus: '<path d="M10 4v12M4 10h12"/>',
+  up: '<path d="M5 12l5-5 5 5"/>',
+  down: '<path d="M5 8l5 5 5-5"/>',
+  left: '<path d="M12 5l-5 5 5 5"/>',
+  right: '<path d="M8 5l5 5-5 5"/>',
+  trash: '<path d="M4 6h12M8 6V4h4v2M6 6l.7 10h6.6L14 6"/>',
+  lock: '<rect x="5" y="9" width="10" height="7" rx="1.5"/><path d="M7 9V7a3 3 0 0 1 6 0v2"/>',
+  external: '<path d="M8 5H5v10h10v-3M11 4h5v5M16 4l-7 7"/>',
+  home: '<path d="M3.5 9.5L10 4l6.5 5.5V16a1 1 0 0 1-1 1h-3.5v-4.5h-4V17H4.5a1 1 0 0 1-1-1z"/>',
+  users: '<circle cx="7.5" cy="7" r="2.8"/><path d="M2.5 16c.4-3 2.4-4.6 5-4.6s4.6 1.6 5 4.6"/><circle cx="14" cy="7.8" r="2.2"/><path d="M14.5 11.6c2 .1 3.4 1.5 3.7 3.9"/>',
+  clipboard: '<rect x="4.5" y="4" width="11" height="13" rx="2"/><path d="M8 4V3h4v1M7.5 9h5M7.5 12.5h5"/>',
+  ticket: '<path d="M3 7a1.5 1.5 0 0 1 1.5-1.5h11A1.5 1.5 0 0 1 17 7v1.5a1.5 1.5 0 0 0 0 3V13a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 3 13v-1.5a1.5 1.5 0 0 0 0-3z"/><path d="M12 5.5v9"/>',
+  doc: '<path d="M6 3.5h5.5L15 7v8.5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1z"/><path d="M11 3.5V7h4M7.5 11h5M7.5 13.5h5"/>',
+  shield: '<path d="M10 3l6 2.2v4.6c0 3.4-2.4 5.9-6 7.2-3.6-1.3-6-3.8-6-7.2V5.2z"/><path d="M7.3 10l2 2 3.6-3.8"/>',
+  sparkle: '<path d="M10 3l1.7 4.3L16 9l-4.3 1.7L10 15l-1.7-4.3L4 9l4.3-1.7z"/><path d="M15.5 14l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4-1.4-.6 1.4-.6z"/>',
+  globe: '<circle cx="10" cy="10" r="7"/><path d="M3 10h14M10 3c2 2 3 4.3 3 7s-1 5-3 7c-2-2-3-4.3-3-7s1-5 3-7z"/>',
+  image: '<rect x="3" y="4" width="14" height="12" rx="2"/><circle cx="7.5" cy="8.5" r="1.4"/><path d="M3.5 14.5l4-3.5 3 2.5 2.5-2 3.5 3"/>',
+  edit: '<path d="M12.5 4.5l3 3L8 15H5v-3z"/>',
+  info: '<circle cx="10" cy="10" r="7"/><path d="M10 9.2V14M10 6.2v.2"/>',
+  coin: '<circle cx="10" cy="10" r="7"/><path d="M12.4 7.6c-.6-.8-1.4-1.1-2.4-1.1-1.4 0-2.4.7-2.4 1.8 0 2.4 4.9 1.1 4.9 3.5 0 1.1-1 1.8-2.5 1.8-1.1 0-2-.4-2.6-1.2M10 5v1.5M10 13.5V15"/>'
+};
+function icon(name) {
+  const s = document.createElementNS(SVG_NS, 'svg');
+  s.setAttribute('viewBox', '0 0 20 20');
+  s.setAttribute('fill', 'none');
+  s.setAttribute('stroke', 'currentColor');
+  s.setAttribute('stroke-width', '1.9');
+  s.setAttribute('stroke-linecap', 'round');
+  s.setAttribute('stroke-linejoin', 'round');
+  s.setAttribute('aria-hidden', 'true');
+  s.setAttribute('class', 'ico');
+  s.innerHTML = ICONS[name] || ICONS.check;
+  return s;
+}
+
+// ---------------------------------------------------------------- logo: one colour (currentColor). A solid shield with </> cut out, a spark and a dot.
+const SHIELD = 'M22 8L38 14V27C38 38 31 45.5 22 49.5C13 45.5 6 38 6 27V14Z';
+const LOGO_CUT = 'M17 20L10.5 27L17 34M27 20L33.5 27L27 34M24.5 18L19.5 36';
+const LOGO_REST = '<path d="M45 2Q46.1 8.4 52 9.5Q46.1 10.6 45 17Q43.9 10.6 38 9.5Q43.9 8.4 45 2Z"/><circle cx="46" cy="43" r="3.2"/>';
+let LOGO_N = 0;
+function logo(size) {
+  const id = 'lgm' + (++LOGO_N);
+  const s = document.createElementNS(SVG_NS, 'svg');
+  s.setAttribute('viewBox', '0 0 54 54');
+  s.setAttribute('width', String(size || 44));
+  s.setAttribute('height', String(size || 44));
+  s.setAttribute('class', 'logo');
+  s.setAttribute('aria-hidden', 'true');
+  s.setAttribute('focusable', 'false');
+  s.innerHTML = '<defs><mask id="' + id + '" maskUnits="userSpaceOnUse" x="0" y="0" width="54" height="54"><rect width="54" height="54" fill="#fff"/>' +
+    '<path d="' + LOGO_CUT + '" fill="none" stroke="#000" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/></mask></defs>' +
+    '<path d="' + SHIELD + '" fill="currentColor" mask="url(#' + id + ')"/><g fill="currentColor">' + LOGO_REST + '</g>';
+  return s;
+}
+
+const clone = o => JSON.parse(JSON.stringify(o));
+const pget = (o, p) => p.split('.').reduce((a, k) => (a == null ? a : a[k]), o);
+function pset(o, p, v) {
+  const ks = p.split('.');
+  let a = o;
+  for (let i = 0; i < ks.length - 1; i++) a = a[ks[i]];
+  a[ks[ks.length - 1]] = v;
+}
+
+const ls = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } },
+  del(k) { try { localStorage.removeItem(k); } catch (e) { /* storage unavailable */ } }
+};
+const ss = {
+  get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { sessionStorage.setItem(k, v); } catch (e) { /* storage unavailable */ } }
+};
+
+// ---------------------------------------------------------------- state
+let S = JSON.parse($('#site-data').textContent);
+const SAVED = { json: JSON.stringify(S) };
+const ST = {
+  admin: false, owner: false, cap: null, readOnly: false, dirty: false, publishing: false,
+  tab: ss.get('yld-tab') || 'start', menuOpen: false, pillOpen: false, msg: '', draft: null
+};
+// the visitor's quote: picked add-ons, how they want to pay, what they want to do about a domain
+const ORDER = { addons: [], pay: 'usd', domain: 'free', touched: false };
+
+let viewSeason = ls.get('yld-season');
+if (!SEASON_IDS.includes(viewSeason)) viewSeason = null;
+const liveSeason = () => (SEASON_IDS.includes(S.season.live) ? S.season.live : 'regular');
+const effSeason = () => viewSeason || liveSeason();
+const seasonMeta = id => META.seasons.find(s => s.id === id) || META.seasons[0];
+const seasonCopy = id => S.seasons[id] || S.seasons.regular;
+
+function applySeason() {
+  document.documentElement.dataset.season = effSeason();
+  FX.update(effSeason());
+}
+function setViewSeason(id) {
+  viewSeason = id === liveSeason() ? null : id;
+  if (viewSeason) ls.set('yld-season', viewSeason); else ls.del('yld-season');
+  ST.pillOpen = false;
+  applySeason();
+  renderAll();
+}
+function setLiveSeason(id) {
+  S.season.live = id;
+  viewSeason = null;
+  ls.del('yld-season');
+  markDirty();
+  applySeason();
+  renderAll();
+}
+
+// ---------------------------------------------------------------- formatting + pricing
+const usd = n => '$' + (Math.round((+n || 0) * 100) / 100);
+const fmt = s => String(s == null ? '' : s)
+  .replace(/\{min\}/g, usd(S.pricing.min)).replace(/\{max\}/g, usd(S.pricing.max)).replace(/\{email\}/g, S.contact.email);
+const addonById = id => S.addons.find(a => a.id === id);
+function calcPrice(ids) {
+  const P = S.pricing;
+  let sum = +P.base || 0;
+  for (const id of ids) { const a = addonById(id); if (a) sum += +a.price || 0; }
+  return Math.min(+P.max || sum, Math.max(+P.min || 0, sum));
+}
+const robuxOf = n => Math.round((+n || 0) * (+S.pricing.robuxPerUsd || 0));
+const robuxStr = n => (+S.pricing.robuxPerUsd ? robuxOf(n).toLocaleString('en-US') + ' Robux' : '');
+const safeUrl = u => (/^https:\/\/[^\s]+$/i.test(String(u || '')) ? String(u) : '');
+const mailLink = (subject, body) => 'mailto:' + S.contact.email + '?subject=' + encodeURIComponent(subject) + (body ? '&body=' + encodeURIComponent(body) : '');
+const dName = () => String(S.contact.discordName || '').trim();
+
+// ---------------------------------------------------------------- small UI helpers
+function toast(msg) {
+  clearTimeout(toast.t);
+  let el = $('.toast');
+  if (!el) { el = h('div', { class: 'toast', role: 'status' }); document.body.append(el); }
+  el.textContent = msg;
+  toast.t = setTimeout(() => el.remove(), 3200);
+}
+async function copyText(text, msg) {
+  try { await navigator.clipboard.writeText(text); toast(msg || 'Copied'); return true; }
+  catch (e) { toast('Copy was blocked. Select the text and copy it yourself.'); return false; }
+}
+function selectNode(node) {
+  try { const r = document.createRange(); r.selectNodeContents(node); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) { /* ignore */ }
+}
+function copyLine(text, label) {
+  const code = h('code', {}, text);
+  return h('span', { class: 'copyline' }, code,
+    h('button', { class: 'btn sm', type: 'button', onclick: async () => { if (!(await copyText(text, label || 'Copied'))) selectNode(code); } }, icon('copy'), 'Copy'));
+}
+
+// ---------------------------------------------------------------- dirty + draft
+let draftTimer = 0;
+function markDirty() {
+  ST.dirty = JSON.stringify(S) !== SAVED.json;
+  updatePubbar();
+  clearTimeout(draftTimer);
+  draftTimer = setTimeout(saveDraft, 500);
+  $$('.adm-link,.nav-adm').forEach(l => l.classList.toggle('dirty', ST.dirty));
+}
+function saveDraft() {
+  if (!ST.admin) return;
+  if (ST.dirty) ls.set(DRAFT_KEY, JSON.stringify(S)); else ls.del(DRAFT_KEY);
+}
+
+// ---------------------------------------------------------------- routing + shell
+const PAGES = {};
+const NAV = [['home', 'Home'], ['services', 'Services'], ['quote', 'Build a Quote'], ['gallery', 'Gallery'], ['faq', 'FAQ'], ['contact', 'Contact']];
+const NAV_MAIN = NAV.slice(0, 3), NAV_UTIL = NAV.slice(3);
+const ROUTE_ALIAS = { pricing: 'quote' };
+function currentRoute() {
+  let k = (location.hash || '').replace(/^#/, '');
+  if (ROUTE_ALIAS[k]) k = ROUTE_ALIAS[k];
+  return PAGES[k] ? k : 'home';
+}
+
+// "YourLocal_DEV's Website Development" -> two lines: the name, then what it is
+function brandParts() {
+  const n = String(S.brand.name || '').trim();
+  const m = n.match(/^(\S+?['’]s)\s+(.+)$/);
+  if (m) return [m[1], m[2]];
+  const w = n.split(/\s+/);
+  if (w.length >= 3) { const k = Math.ceil(w.length / 2); return [w.slice(0, k).join(' '), w.slice(k).join(' ')]; }
+  return [n, ''];
+}
+function brandLink(size) {
+  const [a, b] = brandParts();
+  return h('a', { class: 'brand', href: '#home', 'aria-label': S.brand.name + ', home' }, logo(size || 64),
+    h('span', { class: 'bname' }, h('span', { class: 'b1' }, a), b ? h('span', { class: 'b2' }, b) : null));
+}
+
+function header() {
+  const r = currentRoute();
+  const mk = list => list.map(([k, label]) => h('a', { href: '#' + k, 'aria-current': r === k ? 'page' : null }, label));
+  const nav = h('nav', { class: 'nav' + (ST.menuOpen ? ' open' : ''), id: 'mainnav', 'aria-label': 'Main' },
+    h('div', { class: 'nav-main' }, mk(NAV_MAIN)), h('div', { class: 'nav-util' }, mk(NAV_UTIL)),
+    ST.admin ? h('a', { href: '#admin', class: 'nav-adm' + (ST.dirty ? ' dirty' : ''), 'aria-current': r === 'admin' ? 'page' : null }, 'Admin panel') : null);
+  nav.addEventListener('click', e => { if (e.target.closest('a')) { ST.menuOpen = false; nav.classList.remove('open'); } });
+  const mb = h('button', {
+    class: 'menu-btn', type: 'button', 'aria-controls': 'mainnav', 'aria-expanded': String(ST.menuOpen), 'aria-label': 'Menu',
+    onclick: () => { ST.menuOpen = !ST.menuOpen; nav.classList.toggle('open', ST.menuOpen); mb.setAttribute('aria-expanded', String(ST.menuOpen)); }
+  }, icon('menu'));
+  const chip = ST.admin ? h('a', { href: '#admin', class: 'uchip adm-link' + (ST.dirty ? ' dirty' : ''), 'aria-current': r === 'admin' ? 'page' : null, 'aria-label': 'Admin panel' },
+    h('span', { class: 'uav' }, logo(24)),
+    h('span', { class: 'un' }, ST.owner && dName() ? dName() : 'You'), h('span', { class: 'ub' }, ST.owner ? 'Owner' : 'Administrator'), icon('down')) : null;
+  return h('header', { class: 'hdr' }, h('div', { class: 'wrap' }, h('div', { class: 'hdr-in' },
+    brandLink(68), nav,
+    h('span', { class: 'hdr-tag' }, S.brand.tag),
+    h('div', { class: 'hdr-r' }, chip, h('a', { class: 'hcta', href: '#contact' }, icon('chat'), h('span', { class: 'lbl' }, 'DM me', h('span', { class: 'more' }, ' to order'))), mb))));
+}
+function banner() {
+  const t = fmt(S.copy.banner);
+  if (!t.trim()) return null;
+  return h('div', { class: 'banner', role: 'note' }, h('div', { class: 'wrap' }, icon('info'), h('p', {}, t)));
+}
+function footer() {
+  const dis = safeUrl(S.contact.discordUrl);
+  const dn = dName();
+  return h('footer', { class: 'ftr' }, h('div', { class: 'wrap' },
+    h('div', { class: 'ftr-grid' },
+      h('div', { class: 'stack' }, brandLink(56),
+        h('p', { class: 'fmuted' }, S.brand.tag + '. Build your own quote from ' + usd(S.pricing.min) + ' to ' + usd(S.pricing.max) + '. Pay in Robux or USD.')),
+      h('div', { class: 'stack' }, h('h4', {}, 'Pages'), h('ul', {}, NAV.map(([k, l]) => h('li', {}, h('a', { href: '#' + k }, l))))),
+      h('div', { class: 'stack' }, h('h4', {}, 'DM me'),
+        dn ? h('div', { class: 'stack-sm' }, h('span', { class: 'small fmuted' }, 'Discord'), copyLine(dn, 'Username copied')) : null,
+        h('div', { class: 'stack-sm' }, h('span', { class: 'small fmuted' }, 'Email'), copyLine(S.contact.email, 'Email copied')),
+        dis ? h('a', { class: 'btn ghost sm', href: dis, target: '_blank', rel: 'noopener noreferrer' }, icon('chat'), 'Open my Discord profile') : null)),
+    h('p', { class: 'legal' }, fmt(S.copy.footer))));
+}
+function seasonPill() {
+  const cur = seasonMeta(effSeason());
+  const wrap = h('div', { class: 'spill' });
+  if (ST.pillOpen) {
+    const menu = h('div', { class: 'menu', role: 'group', 'aria-label': 'Season preview' },
+      h('p', {}, viewSeason ? 'Previewing on your screen only.' : 'Try a seasonal look on your screen.'),
+      META.seasons.map(s => h('button', { type: 'button', 'aria-pressed': String(effSeason() === s.id), onclick: () => setViewSeason(s.id) },
+        h('span', { class: 'sw' }, s.dots.map(c => h('i', { style: { background: c } }))),
+        s.label + (s.id === liveSeason() ? ' (site default)' : ''))));
+    wrap.append(menu);
+  }
+  wrap.append(h('button', {
+    type: 'button', 'aria-expanded': String(ST.pillOpen),
+    onclick: () => { ST.pillOpen = !ST.pillOpen; renderPill(); }
+  }, h('span', { class: 'dot' }), h('span', {}, 'Season', h('span', { class: 'pn' }, ': ' + cur.label))));
+  return wrap;
+}
+function renderPill() { const old = $('.spill'); if (old) old.replaceWith(seasonPill()); }
+
+function renderChrome() {
+  const app = $('#app');
+  const main = $('#main-content') || h('main', { id: 'main-content', tabindex: '-1' });
+  app.replaceChildren(...[
+    h('a', { class: 'skip', href: '#', onclick: e => { e.preventDefault(); main.focus(); } }, 'Skip to content'),
+    header(), banner(), main, footer(), seasonPill()].filter(Boolean));
+}
+function renderMain() {
+  const m = $('#main-content');
+  if (!m) return;
+  m.replaceChildren(PAGES[currentRoute()]());
+}
+function renderAll() {
+  document.title = S.brand.name;
+  renderChrome();
+  renderMain();
+}
+
+window.addEventListener('hashchange', () => {
+  ST.menuOpen = false; ST.pillOpen = false;
+  renderChrome();
+  renderMain();
+  window.scrollTo(0, 0);
+});
+
+// ======================================================================
+// fx: seasonal particles on one fixed canvas (bats, leaves, snow, petals)
+// ======================================================================
+const FX = (() => {
+  const PLAN = {
+    halloween: [['bats', 6], ['embers', 22]],
+    fall: [['leaves', 26]],
+    christmas: [['snow', 70]],
+    spring: [['petals', 20], ['pollen', 22]]
+  };
+  const reducedMq = window.matchMedia ? matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
+  let cv = null, ctx = null, W = 0, H = 0, dpr = 1, parts = [], raf = 0, last = 0, season = 'regular', col = ['#fff', '#fff', '#fff'];
+  const rnd = (a, b) => a + Math.random() * (b - a);
+
+  function ensure() {
+    if (cv) return true;
+    cv = document.createElement('canvas');
+    cv.id = 'fx';
+    cv.setAttribute('aria-hidden', 'true');
+    document.body.prepend(cv);
+    ctx = cv.getContext('2d');
+    if (!ctx) return false;
+    size();
+    window.addEventListener('resize', () => { clearTimeout(ensure.t); ensure.t = setTimeout(() => { size(); fill(); if (reducedMq.matches) paintStatic(); }, 150); });
+    document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); else go(); });
+    new MutationObserver(readColors).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'data-season', 'data-palette'] });
+    if (window.matchMedia) matchMedia('(prefers-color-scheme: dark)').addEventListener('change', readColors);
+    return true;
+  }
+  function size() {
+    W = window.innerWidth; H = window.innerHeight;
+    dpr = Math.min(2, window.devicePixelRatio || 1);
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function readColors() {
+    const cs = getComputedStyle(document.documentElement);
+    col = ['--fx1', '--fx2', '--fx3'].map(k => cs.getPropertyValue(k).trim() || '#fff');
+  }
+  function mk(kind, initial) {
+    const x = rnd(0, W), y = initial ? rnd(0, H) : -24;
+    switch (kind) {
+      case 'snow': return { kind, x, y, r: rnd(1.2, 3.6), vy: rnd(24, 52), vx: rnd(-8, 8), ph: rnd(0, 6.28), c: Math.random() < 0.7 ? 0 : 1 };
+      case 'leaves': return { kind, x, y, s: rnd(7, 13), vy: rnd(26, 58), vx: rnd(-14, 14), rot: rnd(0, 6.28), vr: rnd(-1.6, 1.6), ph: rnd(0, 6.28), c: Math.floor(rnd(0, 3)) };
+      case 'petals': return { kind, x, y, s: rnd(4, 8), vy: rnd(18, 38), vx: rnd(-10, 14), rot: rnd(0, 6.28), vr: rnd(-1.2, 1.2), ph: rnd(0, 6.28) };
+      case 'pollen': return { kind, x, y: initial ? rnd(0, H) : H + 10, r: rnd(1, 2.4), vy: -rnd(6, 16), vx: rnd(-6, 6), ph: rnd(0, 6.28) };
+      case 'embers': return { kind, x, y: initial ? rnd(0, H) : H + 10, r: rnd(1.2, 2.8), vy: -rnd(14, 34), vx: rnd(-8, 8), ph: rnd(0, 6.28) };
+      case 'bats': return { kind, x: initial ? rnd(-40, W) : -50, base: rnd(H * 0.05, H * 0.3), s: rnd(0.8, 1.35), vx: rnd(46, 96), ph: rnd(0, 6.28) };
+      default: return null;
+    }
+  }
+  function fill() {
+    parts = [];
+    const plan = PLAN[season];
+    if (!plan || !cv) return;
+    const k = Math.max(0.45, Math.min(1, (W * H) / (1300 * 800)));
+    for (const [kind, n] of plan) for (let i = 0; i < Math.max(3, Math.round(n * k)); i++) parts.push(mk(kind, true));
+  }
+  function step(dt, t) {
+    for (let i = 0; i < parts.length; i++) {
+      const p = parts[i];
+      switch (p.kind) {
+        case 'snow': p.y += p.vy * dt; p.x += (p.vx + Math.sin(t + p.ph) * 14) * dt; if (p.y > H + 8) parts[i] = mk('snow', false); break;
+        case 'leaves': p.y += p.vy * dt; p.x += (p.vx + Math.sin(t * 1.4 + p.ph) * 26) * dt; p.rot += p.vr * dt; if (p.y > H + 16) parts[i] = mk('leaves', false); break;
+        case 'petals': p.y += p.vy * dt; p.x += (p.vx + Math.sin(t * 1.1 + p.ph) * 20) * dt; p.rot += p.vr * dt; if (p.y > H + 12) parts[i] = mk('petals', false); break;
+        case 'pollen': p.y += p.vy * dt; p.x += Math.sin(t * 0.8 + p.ph) * 10 * dt; if (p.y < -10) parts[i] = mk('pollen', false); break;
+        case 'embers': p.y += p.vy * dt; p.x += (p.vx + Math.sin(t * 1.6 + p.ph) * 10) * dt; if (p.y < -10) parts[i] = mk('embers', false); break;
+        case 'bats': p.x += p.vx * dt; if (p.x > W + 50) parts[i] = mk('bats', false); break;
+      }
+    }
+  }
+  function drawBat(p, t) {
+    const y = p.base + Math.sin(t * 1.5 + p.ph) * 16;
+    const f = Math.sin(t * 9 + p.ph);
+    ctx.save(); ctx.translate(p.x, y); ctx.scale(p.s, p.s); ctx.fillStyle = col[0];
+    ctx.beginPath(); ctx.moveTo(0, 0);
+    ctx.quadraticCurveTo(10, -12 * (0.4 + 0.6 * f), 24, -4 + 6 * f);
+    ctx.quadraticCurveTo(17, 0, 12, 6); ctx.quadraticCurveTo(6, 3, 0, 8); ctx.quadraticCurveTo(-6, 3, -12, 6);
+    ctx.quadraticCurveTo(-17, 0, -24, -4 + 6 * f); ctx.quadraticCurveTo(-10, -12 * (0.4 + 0.6 * f), 0, 0);
+    ctx.fill();
+    ctx.beginPath(); ctx.arc(0, -1, 3.2, 0, 6.283); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(-3, -3); ctx.lineTo(-3.4, -7.5); ctx.lineTo(-0.6, -4); ctx.moveTo(3, -3); ctx.lineTo(3.4, -7.5); ctx.lineTo(0.6, -4); ctx.fill();
+    ctx.restore();
+  }
+  function draw(t) {
+    ctx.clearRect(0, 0, W, H);
+    for (const p of parts) {
+      switch (p.kind) {
+        case 'snow': ctx.globalAlpha = 0.85; ctx.fillStyle = col[p.c]; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill(); break;
+        case 'leaves':
+          ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot); ctx.globalAlpha = 0.9; ctx.fillStyle = col[p.c];
+          ctx.beginPath(); ctx.moveTo(0, -p.s); ctx.quadraticCurveTo(p.s * 0.95, -p.s * 0.2, 0, p.s); ctx.quadraticCurveTo(-p.s * 0.95, -p.s * 0.2, 0, -p.s); ctx.fill();
+          ctx.strokeStyle = 'rgba(0,0,0,.25)'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(0, -p.s * 0.8); ctx.lineTo(0, p.s * 1.15); ctx.stroke();
+          ctx.restore(); break;
+        case 'petals':
+          ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot); ctx.globalAlpha = 0.85; ctx.fillStyle = col[0];
+          ctx.beginPath(); ctx.ellipse(0, 0, p.s * 0.55, p.s, 0, 0, 6.283); ctx.fill(); ctx.restore(); break;
+        case 'pollen': ctx.globalAlpha = 0.55 + 0.35 * Math.sin(t * 2 + p.ph); ctx.fillStyle = col[1]; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill(); break;
+        case 'embers': ctx.globalAlpha = Math.max(0.15, Math.min(0.9, p.y / H + 0.2)); ctx.fillStyle = col[1]; ctx.shadowColor = col[1]; ctx.shadowBlur = 8; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill(); ctx.shadowBlur = 0; break;
+        case 'bats': ctx.globalAlpha = 0.9; drawBat(p, t); break;
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+  function frame(ts) {
+    raf = requestAnimationFrame(frame);
+    const dt = Math.min(0.05, (ts - last) / 1000 || 0);
+    last = ts;
+    step(dt, ts / 1000);
+    draw(ts / 1000);
+  }
+  function paintStatic() { if (cv) draw(0); }
+  function stop() { if (raf) cancelAnimationFrame(raf); raf = 0; }
+  function go() { if (raf || !parts.length || reducedMq.matches || document.hidden) return; last = performance.now(); raf = requestAnimationFrame(frame); }
+
+  return {
+    update(id) {
+      season = id;
+      const enabled = PLAN[id] && S.season.fx !== false;
+      stop();
+      if (!enabled) { if (cv) ctx.clearRect(0, 0, W, H); parts = []; return; }
+      if (!ensure()) return;
+      readColors();
+      fill();
+      if (reducedMq.matches) paintStatic(); else go();
+    }
+  };
+})();
+
+// ======================================================================
+// pages: public site
+// ======================================================================
+function pageHead(eyebrow, title, sub, right) {
+  return h('header', { class: 'phead' },
+    h('div', { class: 'wrap phead-in' },
+      h('div', { class: 'stack' }, eyebrow ? h('p', { class: 'eyebrow' }, eyebrow) : null, h('h1', {}, title), sub ? h('p', { class: 'lede' }, fmt(sub)) : null),
+      right ? h('div', { class: 'phead-r' }, right) : null));
+}
+function secHead(eyebrow, title, sub, right) {
+  return h('div', { class: 'sec-head' + (right ? ' split' : '') },
+    h('div', { class: 'stack' }, eyebrow ? h('p', { class: 'eyebrow' }, eyebrow) : null, h('h2', {}, title), sub ? h('p', { class: 'lede' }, fmt(sub)) : null), right || null);
+}
+const sec = (cls, ...kids) => h('section', { class: 'sec ' + cls }, h('div', { class: 'wrap' }, ...kids));
+const tile = name => h('span', { class: 'tile' }, icon(name));
+const priceChip = f => {
+  const ad = f.addon ? addonById(f.addon) : null;
+  return h('span', { class: 'chip' + (ad ? '' : ' ok') }, ad ? '+' + usd(ad.price) : 'Included');
+};
+const orderOpen = () => S.brand.open !== false;
+const dmBtn = (label, cls) => h('a', { class: 'btn ' + (cls || 'primary'), href: '#contact' }, label || 'DM me', icon('arrow'));
+// a white card with a soft header band, like the forms on the sites this is modelled on
+function pcard(title, bodyKids, o = {}) {
+  const id = o.id || null;
+  return h('section', { class: 'pcard' + (o.cls ? ' ' + o.cls : ''), role: id ? 'group' : null, 'aria-labelledby': id },
+    h('header', {}, h('h3', { id }, o.n ? h('span', { class: 'qn' }, String(o.n)) : null, title), o.right || null),
+    ...bodyKids);
+}
+function goldCard(title, ...kids) {
+  return h('aside', { class: 'gcard' }, h('h3', {}, title), ...kids);
+}
+
+// ---------------------------------------------------------------- hero pieces
+function ornament(id) {
+  const o = h('div', { class: 'orn', 'aria-hidden': 'true' });
+  if (id === 'halloween') o.append(h('div', { class: 'moon' }));
+  else if (id === 'fall') o.append(h('div', { class: 'autumn-sun' }));
+  else if (id === 'spring') o.append(h('div', { class: 'sun' }));
+  else if (id === 'christmas') {
+    const l = h('div', { class: 'lights' });
+    const svg = document.createElementNS(SVG_NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 100 12'); svg.setAttribute('preserveAspectRatio', 'none');
+    const path = document.createElementNS(SVG_NS, 'path');
+    path.setAttribute('d', 'M0,1 Q50,13 100,1');
+    svg.append(path); l.append(svg);
+    const cols = ['#FFC93C', '#FFFFFF', '#FF8AA0', '#7FD8FF'];
+    const n = 22;
+    for (let i = 0; i < n; i++) {
+      const t = i / (n - 1);
+      l.append(h('i', { style: { left: (t * 100) + '%', top: ((1 + 24 * t * (1 - t)) * 4.5) + 'px', '--c': cols[i % 4], '--d': ((i * 0.37) % 2.6).toFixed(2) + 's' } }));
+    }
+    o.append(l);
+  }
+  return o;
+}
+function facts() {
+  const items = ['Sites from ' + usd(S.pricing.min) + ' to ' + usd(S.pricing.max), 'Robux or USD', 'Free or paid domain', META.seasons.length + ' seasonal looks'];
+  return h('ul', { class: 'facts' }, items.map(t => h('li', {}, icon('check'), t)));
+}
+function hero() {
+  const id = effSeason();
+  const sc = seasonCopy(id);
+  const open = orderOpen();
+  return h('section', { class: 'hero' + (id === 'christmas' ? ' xmas' : '') },
+    h('div', { class: 'hero-bg', 'aria-hidden': 'true' }, h('i', { class: 'grid' }), h('span', { class: 'wm' }, logo(520))),
+    ornament(id),
+    h('div', { class: 'wrap hero-in' },
+      h('span', { class: 'status' + (open ? '' : ' off') }, h('i', { class: 'sdot' }), open ? sc.pill : 'Orders are closed right now'),
+      h('h1', {}, sc.heroTitle + ' ', h('em', {}, sc.heroAccent)),
+      h('p', { class: 'lede' }, fmt(sc.heroSub)),
+      h('div', { class: 'ctas' },
+        h('a', { class: 'btn primary lg', href: '#quote' }, 'Build your quote'),
+        h('a', { class: 'btn ghost lg', href: '#contact' }, dName() ? 'DM me on Discord' : 'Message me')),
+      facts()));
+}
+// the dark band right under the hero: three big links separated by thin lines
+function linkBand() {
+  const dn = dName();
+  const items = [
+    ['Build a quote', 'Tick the features you want and watch the price add up.', '#quote'],
+    ['Website gallery', 'Pictures of the sites I have built for other servers.', '#gallery'],
+    ['DM me', dn ? 'Discord ' + dn + ' or email, whatever is easiest.' : 'Discord or email, whatever is easiest for you.', '#contact']
+  ];
+  return h('nav', { class: 'lband', 'aria-label': 'Quick links' }, h('div', { class: 'wrap lband-in' }, items.map(([t, d, href]) =>
+    h('a', { class: 'lcard', href }, h('span', { class: 'lt' }, h('h3', {}, t), icon('arrow')), h('p', {}, d)))));
+}
+
+// ---------------------------------------------------------------- shared sections
+function featureGrid() {
+  return h('div', { class: 'cards3' }, S.features.map(f =>
+    h('article', { class: 'card feat' }, h('div', { class: 'feat-top' }, tile(f.icon), priceChip(f)), h('h3', {}, f.title), h('p', { class: 'muted' }, f.body))));
+}
+function stepsList() {
+  return h('ol', { class: 'steps' }, S.process.map((p, i) =>
+    h('li', {}, h('span', { class: 'num' }, String(i + 1)), h('div', { class: 'sbody' }, h('h3', {}, p.title), h('p', { class: 'muted' }, fmt(p.body))))));
+}
+function faqList(items) {
+  return h('div', { class: 'faq' }, items.map(f => h('details', {}, h('summary', {}, f.q, icon('down')), h('div', { class: 'ans' }, fmt(f.a)))));
+}
+function ctaBand() {
+  const dn = dName();
+  return h('section', { class: 'ctaband' }, h('div', { class: 'wrap cta' },
+    h('div', { class: 'stack' }, h('h2', {}, fmt(S.copy.ctaTitle)), h('p', { class: 'lede' }, fmt(S.copy.ctaSub))),
+    h('div', { class: 'cta-r' },
+      h('a', { class: 'btn primary lg', href: '#contact' }, dn ? 'DM me on Discord' : 'Message me'),
+      h('a', { class: 'btn ghost lg', href: '#quote' }, 'Build a quote'),
+      dn ? h('span', { class: 'small' }, 'Discord: ', h('b', { class: 'mono' }, dn)) : null)));
+}
+function payDomainPanels() {
+  const card = (title, tag, text) => pcard(title, [h('div', { class: 'pbody' }, h('p', { class: 'muted' }, fmt(text)))], { right: h('span', { class: 'hk' }, tag) });
+  return h('div', { class: 'cols2 four' },
+    card('Pay in Robux', 'Robux', S.payments.robux),
+    card('Pay in USD', 'USD', S.payments.usd),
+    S.domains.map(d => card(d.name, d.price, d.blurb)));
+}
+function seasonBand() {
+  return sec('tight', h('div', { class: 'sband' },
+    h('div', { class: 'stack' }, h('p', { class: 'eyebrow' }, 'Seasons'), h('h2', {}, fmt(S.copy.seasonsTitle)), h('p', { class: 'lede' }, fmt(S.copy.seasonsSub))),
+    h('div', { class: 'schips', role: 'group', 'aria-label': 'Try a seasonal look' }, META.seasons.map(s =>
+      h('button', { class: 'schip', type: 'button', 'aria-pressed': String(effSeason() === s.id), onclick: () => setViewSeason(s.id) },
+        h('span', { class: 'sw' }, s.dots.map(c => h('i', { style: { background: c } }))), s.label)))));
+}
+// the gold card beside "how it works": the whole price list at a glance
+function priceCard() {
+  const rows = [['Base site', S.pricing.base, '']].concat(S.addons.map(a => [a.name, a.price, '+']));
+  return goldCard(fmt(S.copy.teaserTitle),
+    h('p', {}, fmt(S.copy.teaserSub)),
+    h('ul', { class: 'plist' }, rows.map(([n, p, sg]) => h('li', {}, h('span', {}, n), h('i', { class: 'dots' }), h('b', {}, sg + usd(p))))),
+    h('p', { class: 'pmax' }, h('b', {}, 'Max ' + usd(S.pricing.max)), ' · paid domains are billed separately by the registrar.'),
+    h('a', { class: 'btn dark block', href: '#quote' }, 'Build your own quote', icon('arrow')));
+}
+
+// ---------------------------------------------------------------- home
+PAGES.home = () => {
+  const f = document.createDocumentFragment();
+  f.append(hero(), linkBand(),
+    sec('', secHead('What you get', fmt(S.copy.servicesTitle), S.copy.servicesSub, h('a', { class: 'btn', href: '#services' }, 'All services', icon('arrow'))), featureGrid()));
+  const g = galleryTeaser();
+  if (g) f.append(g);
+  f.append(
+    sec('', h('div', { class: 'split-steps' },
+      h('div', { class: 'stack-lg' }, secHead('', fmt(S.copy.processTitle), S.copy.processSub), stepsList()),
+      h('div', { class: 'sticky' }, priceCard()))),
+    seasonBand(),
+    sec('', secHead('FAQ', fmt(S.copy.faqTitle), S.copy.faqSub), faqList(S.faq.slice(0, 4)),
+      h('p', { class: 'more' }, h('a', { href: '#faq' }, 'See all questions', icon('arrow')))),
+    ctaBand());
+  return f;
+};
+
+// ---------------------------------------------------------------- services
+PAGES.services = () => {
+  const f = document.createDocumentFragment();
+  f.append(pageHead('', fmt(S.copy.servicesTitle), S.copy.servicesSub, h('a', { class: 'btn primary', href: '#quote' }, 'Build a quote', icon('arrow'))), sec('', featureGrid()));
+  const sa = addonById('seasons');
+  f.append(sec('', secHead('Seasonal themes', 'Try a season right now', 'Click a look to preview it on this page. This is the same one-click switch your server\'s site can have' + (sa ? ' (' + usd(sa.price) + ' add-on).' : '.')),
+    h('div', { class: 'sgrid' }, META.seasons.map(s => h('button', { class: 'card stile', type: 'button', 'aria-pressed': String(effSeason() === s.id), onclick: () => setViewSeason(s.id) },
+      h('span', { class: 'band-sw' }, s.dots.map(c => h('i', { style: { background: c } }))),
+      h('b', {}, s.label), h('span', { class: 'd' }, s.desc)))),
+    h('p', { class: 'muted small', style: { marginTop: '1rem' } }, 'Previewing only changes your screen. Site owners pick the live season for every visitor.')),
+    ctaBand());
+  return f;
+};
+
+// ---------------------------------------------------------------- quote builder (the only pricing page)
+const PAY_OPTS = [['usd', 'USD', 'Pay with dollars'], ['robux', 'Robux', 'Pay with Robux']];
+const DOMAIN_OPTS = [
+  ['free', 'Free domain', 'A free address, set up for you at no extra cost.'],
+  ['paid', 'Paid domain', 'Something like yourserver.com. You buy it from a registrar, so it is not in my price. I connect it for you.'],
+  ['own', 'I already own one', 'Tell me where it is registered and I will connect it.']
+];
+const DOMAIN_TEXT = { free: 'Free domain', paid: 'Paid domain (billed by the registrar, not included)', own: 'I already own a domain' };
+
+function builder() {
+  const quote = h('aside', { class: 'gcard quote', 'aria-live': 'polite', 'aria-label': 'Your quote' });
+  function drawQuote() {
+    const ids = ORDER.addons.filter(id => addonById(id));
+    const raw = (+S.pricing.base || 0) + ids.reduce((s, id) => s + (+addonById(id).price || 0), 0);
+    const total = calcPrice(ids);
+    const rx = robuxStr(total);
+    const inRobux = ORDER.pay === 'robux' && !!rx;
+    quote.replaceChildren(...[
+      h('h3', {}, 'Your quote'),
+      h('div', { class: 'total' }, inRobux ? rx : usd(total)),
+      h('div', { class: 'tsub' }, inRobux ? usd(total) : (rx ? 'about ' + rx : 'Robux amount confirmed over DM')),
+      h('dl', {},
+        h('div', {}, h('dt', {}, 'Base site'), h('dd', {}, usd(S.pricing.base))),
+        ids.map(id => h('div', {}, h('dt', {}, addonById(id).name), h('dd', {}, '+' + usd(addonById(id).price)))),
+        h('div', {}, h('dt', {}, 'Domain'), h('dd', {}, ORDER.domain === 'free' ? 'Free' : (ORDER.domain === 'paid' ? 'Billed by registrar' : 'Yours')))),
+      raw > total ? h('p', { class: 'small' }, 'Capped at ' + usd(S.pricing.max) + ', so you get every feature.') : (raw < total ? h('p', { class: 'small' }, 'Minimum price is ' + usd(S.pricing.min) + '.') : null),
+      h('div', { class: 'qbtns' },
+        h('a', { class: 'btn dark', href: '#contact' }, 'DM me this quote', icon('arrow')),
+        h('button', { class: 'btn', type: 'button', onclick: () => copyText(dmTemplate(), 'Message copied') }, icon('copy'), 'Copy as message')),
+      h('p', { class: 'small' }, 'Nothing is sent from this page. You message me yourself on Discord or by email.')
+    ].filter(Boolean));
+  }
+  const touch = () => { ORDER.touched = true; };
+  const opts = h('div', { class: 'opts' }, S.addons.map(a => {
+    const cb = h('input', { type: 'checkbox', id: 'opt-' + a.id });
+    cb.checked = ORDER.addons.includes(a.id);
+    cb.addEventListener('change', () => {
+      ORDER.addons = cb.checked ? [...new Set([...ORDER.addons, a.id])] : ORDER.addons.filter(x => x !== a.id);
+      touch(); drawQuote();
+    });
+    return h('label', { class: 'opt', for: 'opt-' + a.id }, cb, h('span', { class: 'grow' }, h('b', {}, a.name), h('span', { class: 'muted small' }, a.blurb)), h('span', { class: 'p' }, '+' + usd(a.price)));
+  }));
+  const pay = h('div', { class: 'opts', role: 'radiogroup', 'aria-label': 'Pay with' }, PAY_OPTS.map(([v, l, sub]) => {
+    const r = h('input', { type: 'radio', name: 'pay', value: v, id: 'pay-' + v });
+    r.checked = ORDER.pay === v;
+    r.addEventListener('change', () => { if (r.checked) { ORDER.pay = v; touch(); drawQuote(); } });
+    return h('label', { class: 'opt', for: 'pay-' + v }, r, h('span', { class: 'grow' }, h('b', {}, l), h('span', { class: 'muted small' }, sub)));
+  }));
+  const doms = h('div', { class: 'opts', role: 'radiogroup', 'aria-label': 'Domain' }, DOMAIN_OPTS.map(([v, l, sub]) => {
+    const r = h('input', { type: 'radio', name: 'dom', value: v, id: 'dom-' + v });
+    r.checked = ORDER.domain === v;
+    r.addEventListener('change', () => { if (r.checked) { ORDER.domain = v; touch(); drawQuote(); } });
+    return h('label', { class: 'opt', for: 'dom-' + v }, r, h('span', { class: 'grow' }, h('b', {}, l), h('span', { class: 'muted small' }, sub)),
+      h('span', { class: 'p' }, v === 'free' ? 'Free' : (v === 'paid' ? 'Separate' : '')));
+  }));
+  drawQuote();
+  const know = h('aside', { class: 'card know' }, h('h3', {}, 'Good to know'),
+    h('p', {}, 'A paid domain is billed by the registrar, so it is never part of the ' + usd(S.pricing.max) + ' maximum.'),
+    h('p', {}, 'I confirm the exact price and how to pay before you send anything.'),
+    h('p', {}, 'This page only builds a quote. Nothing is sent until you message me.'));
+  return h('div', { class: 'builder' },
+    h('div', { class: 'stack-lg' },
+      pcard('Pick your features', [h('p', { class: 'pintro' }, 'Every site starts at ' + usd(S.pricing.base) + ' with a home page, rules and Discord links. Tick what you need.'), opts], { n: 1, id: 'qs1' }),
+      pcard('How will you pay?', [pay], { n: 2, id: 'qs2' }),
+      pcard('Choose a domain option', [doms], { n: 3, id: 'qs3' })),
+    h('div', { class: 'qside' }, quote, know));
+}
+PAGES.quote = () => {
+  const f = document.createDocumentFragment();
+  f.append(pageHead('', fmt(S.copy.quoteTitle), S.copy.quoteSub, dmBtn('Ask me a question')),
+    sec('', builder()),
+    sec('tight', secHead('Payment and domains', 'Pay your way, go live your way'), payDomainPanels()),
+    ctaBand());
+  return f;
+};
+
+PAGES.faq = () => {
+  const f = document.createDocumentFragment();
+  f.append(pageHead('', fmt(S.copy.faqTitle), S.copy.faqSub, dmBtn('Ask me directly')), sec('', faqList(S.faq)), ctaBand());
+  return f;
+};
+
+// ---------------------------------------------------------------- contact (DM first)
+function dmTemplate() {
+  const ids = ORDER.addons.filter(id => addonById(id));
+  const t = ORDER.touched;
+  const total = calcPrice(ids);
+  return [
+    'Hi! I would like a website for my ERLC server.', '',
+    'Server name: ',
+    'Type of community (police, fire, DOT, general...): ',
+    'Features: ' + (ids.length ? ids.map(id => addonById(id).name).join(', ') : (t ? 'Base site only' : 'Not sure yet')),
+    'Estimated price: ' + (t ? usd(total) + (robuxStr(total) ? ' (about ' + robuxStr(total) + ')' : '') : 'Not sure yet'),
+    'Paying with: ' + (t ? (ORDER.pay === 'robux' ? 'Robux' : 'USD') : 'Robux or USD'),
+    'Domain: ' + (t ? DOMAIN_TEXT[ORDER.domain] : 'free / I already own one / help me buy one'),
+    'Deadline (optional): '
+  ].join('\n');
+}
+function contactCards() {
+  const dn = dName();
+  const dis = safeUrl(S.contact.discordUrl);
+  const cards = [];
+  if (dn) {
+    cards.push(pcard('Discord · fastest reply', [h('div', { class: 'pbody' },
+      h('p', { class: 'handle' }, dn),
+      h('p', { class: 'muted' }, 'Send me a friend request or a DM and tell me about your server.'),
+      h('div', { class: 'row' },
+        h('button', { class: 'btn dark', type: 'button', onclick: () => copyText(dn, 'Username copied') }, icon('copy'), 'Copy username'),
+        dis ? h('a', { class: 'btn', href: dis, target: '_blank', rel: 'noopener noreferrer' }, 'Open my profile', icon('external')) : null))], { cls: 'ccard main' }));
+  } else if (ST.admin) {
+    cards.push(pcard('Add your Discord username', [h('div', { class: 'pbody' },
+      h('p', { class: 'muted' }, 'Visitors will not see a Discord card until you add your username in Admin, Contact and site.'),
+      h('a', { class: 'btn', href: '#admin', onclick: () => { ST.tab = 'contact'; ss.set('yld-tab', 'contact'); } }, 'Open Admin', icon('arrow')))],
+      { cls: 'ccard todo', right: h('span', { class: 'hk' }, 'Only you see this') }));
+  }
+  cards.push(pcard('Email', [h('div', { class: 'pbody' },
+    h('p', { class: 'handle' }, S.contact.email),
+    h('p', { class: 'muted' }, 'Prefer email? Write to this address and I will reply with a quote.'),
+    h('div', { class: 'row' },
+      h('button', { class: 'btn' + (dn ? '' : ' dark'), type: 'button', onclick: () => copyText(S.contact.email, 'Email copied') }, icon('copy'), 'Copy email'),
+      h('a', { class: 'btn', href: mailLink('Website order for my ERLC server') }, 'Open email app')))], { cls: 'ccard' }));
+  return h('div', { class: 'cols2 cc' }, cards);
+}
+PAGES.contact = () => {
+  const f = document.createDocumentFragment();
+  const pre = h('pre', { tabindex: '0' }, dmTemplate());
+  f.append(pageHead('', fmt(S.copy.contactTitle), S.copy.contactSub),
+    sec('tight', contactCards()),
+    sec('tight', pcard('Not sure what to say?', [h('div', { class: 'pbody' },
+      h('p', { class: 'muted' }, 'Copy this, fill in the blanks and send it to me. It makes the quote faster.'),
+      pre,
+      h('div', { class: 'row' },
+        h('button', { class: 'btn dark', type: 'button', onclick: async () => { if (!(await copyText(dmTemplate(), 'Message copied'))) selectNode(pre); } }, icon('copy'), 'Copy message')),
+      h('p', { class: 'small muted' }, 'Nothing is sent from this page. You paste the message into Discord or an email yourself.'))],
+      { cls: 'msgbox', right: h('span', { class: 'chip' }, ORDER.touched ? 'Includes your quote' : 'Template') })),
+    sec('tight', secHead('Before you pay', 'Pay your way, go live your way'), payDomainPanels()));
+  return f;
+};
+
+// ======================================================================
+// gallery: a channel-style feed. Only people with Edit access can post.
+// Pictures are shrunk in the browser and stored inside the page itself.
+// ======================================================================
+const MAX_PER_POST = 4;
+const MAX_GALLERY_CHARS = 10000000;
+const galleryChars = () => S.posts.reduce((n, p) => n + (p.imgs || []).reduce((m, i) => m + String(i.src || '').length, 0), 0);
+const galleryMB = () => (galleryChars() / 1000000).toFixed(1);
+const fmtDate = iso => {
+  const d = new Date(String(iso) + 'T12:00:00');
+  return isNaN(d) ? '' : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+};
+
+function readImage(file) {
+  return new Promise((res, rej) => {
+    const url = URL.createObjectURL(file);
+    const im = new Image();
+    im.onload = () => { URL.revokeObjectURL(url); res(im); };
+    im.onerror = () => { URL.revokeObjectURL(url); rej(new Error('unreadable image')); };
+    im.src = url;
+  });
+}
+async function compressImage(file) {
+  const im = await readImage(file);
+  let max = 1400, q = 0.82, out = null;
+  for (let i = 0; i < 4; i++) {
+    const sc = Math.min(1, max / Math.max(im.naturalWidth, im.naturalHeight));
+    const w = Math.max(1, Math.round(im.naturalWidth * sc)), hh = Math.max(1, Math.round(im.naturalHeight * sc));
+    const c = document.createElement('canvas');
+    c.width = w; c.height = hh;
+    const x = c.getContext('2d');
+    x.fillStyle = '#FFFFFF'; x.fillRect(0, 0, w, hh);
+    x.drawImage(im, 0, 0, w, hh);
+    out = { src: c.toDataURL('image/jpeg', q), w, h: hh };
+    if (out.src.length < 600000) break;
+    max = Math.round(max * 0.8); q = Math.max(0.6, q - 0.06);
+  }
+  return out;
+}
+
+// ---------------------------------------------------------------- composer (people with Edit access)
+const COMP = { caption: '', imgs: [], busy: false, err: '' };
+function composer(redraw) {
+  const box = h('section', { class: 'card composer', 'aria-label': 'New gallery post' });
+  async function addFiles(files) {
+    COMP.err = '';
+    const room = MAX_PER_POST - COMP.imgs.length;
+    const imgs = files.filter(f => /^image\//.test(f.type));
+    if (files.length && !imgs.length) COMP.err = 'Choose picture files, like PNG, JPG or WebP.';
+    else if (imgs.length > room) COMP.err = 'Up to ' + MAX_PER_POST + ' pictures per post. Extra pictures were skipped.';
+    COMP.busy = true; draw();
+    for (const f of imgs.slice(0, Math.max(0, room))) {
+      try { COMP.imgs.push(await compressImage(f)); }
+      catch (e) { COMP.err = 'One picture could not be read. Try a PNG or JPG.'; }
+    }
+    COMP.busy = false; draw();
+  }
+  function post() {
+    const caption = COMP.caption.trim();
+    if (!caption && !COMP.imgs.length) return;
+    const add = COMP.imgs.reduce((n, i) => n + i.src.length, 0);
+    if (galleryChars() + add > MAX_GALLERY_CHARS) { COMP.err = 'The gallery is full (about ' + (MAX_GALLERY_CHARS / 1000000) + ' MB). Delete an older post first.'; draw(); return; }
+    S.posts.unshift({ id: 'p' + Date.now().toString(36), date: new Date().toISOString().slice(0, 10), caption, imgs: COMP.imgs.map(i => ({ src: i.src, w: i.w, h: i.h })) });
+    COMP.caption = ''; COMP.imgs = []; COMP.err = '';
+    markDirty();
+    toast('Added to the gallery. Press Publish changes to make it live.');
+    redraw();
+  }
+  function draw() {
+    const cap = h('textarea', { id: 'g-caption', rows: 3, maxlength: 600, placeholder: 'Say something about this site (optional)', 'aria-label': 'Caption', value: COMP.caption });
+    cap.addEventListener('input', () => { COMP.caption = cap.value; ok.disabled = COMP.busy || (!cap.value.trim() && !COMP.imgs.length); });
+    const file = h('input', { id: 'g-file', type: 'file', accept: 'image/*', multiple: true, hidden: true });
+    file.addEventListener('change', () => { const fl = Array.from(file.files); file.value = ''; addFiles(fl); });
+    const ok = h('button', { class: 'btn primary', type: 'button', id: 'g-post', disabled: COMP.busy || (!COMP.caption.trim() && !COMP.imgs.length), onclick: post }, 'Post to gallery');
+    box.replaceChildren(...[
+      h('div', { class: 'row between' }, h('h3', {}, 'New post'), h('span', { class: 'small muted mono' }, galleryMB() + ' of ' + (MAX_GALLERY_CHARS / 1000000) + ' MB used')),
+      cap,
+      COMP.imgs.length ? h('div', { class: 'thumbs' }, COMP.imgs.map((im, i) => h('div', { class: 'thumb' }, h('img', { src: im.src, alt: 'Picture ' + (i + 1) + ' to post' }),
+        h('button', { type: 'button', 'aria-label': 'Remove picture ' + (i + 1), onclick: () => { COMP.imgs.splice(i, 1); COMP.err = ''; draw(); } }, icon('close'))))) : null,
+      COMP.err ? h('p', { class: 'notice bad', role: 'alert' }, COMP.err) : null,
+      h('div', { class: 'row' },
+        h('button', { class: 'btn', type: 'button', disabled: COMP.busy || COMP.imgs.length >= MAX_PER_POST, onclick: () => file.click() }, icon('image'), COMP.busy ? 'Adding...' : 'Add pictures'),
+        file, ok,
+        h('span', { class: 'small muted' }, 'Pictures are shrunk automatically. Up to ' + MAX_PER_POST + ' per post.'))].filter(Boolean));
+  }
+  draw();
+  return box;
+}
+
+// ---------------------------------------------------------------- lightbox
+function openLightbox(post, start, opener) {
+  const imgs = post.imgs || [];
+  let idx = start;
+  const old = $('.lb'); if (old) old.remove();
+  const img = h('img', { alt: 'Website picture' });
+  const cnt = h('span', { class: 'lb-n' });
+  const prev = h('button', { class: 'round lb-b prev', type: 'button', 'aria-label': 'Previous picture', onclick: e => { e.stopPropagation(); go(-1); } }, icon('left'));
+  const next = h('button', { class: 'round lb-b next', type: 'button', 'aria-label': 'Next picture', onclick: e => { e.stopPropagation(); go(1); } }, icon('right'));
+  const x = h('button', { class: 'round lb-x', type: 'button', 'aria-label': 'Close picture viewer', onclick: close }, icon('close'));
+  const lb = h('div', { class: 'lb', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Picture viewer', onclick: e => { if (e.target === lb || e.target === stage) close(); } });
+  const stage = h('div', { class: 'lb-stage' }, img);
+  lb.append(stage, x, prev, next, h('div', { class: 'lb-cap' }, post.caption ? h('p', {}, post.caption) : null, cnt));
+  function show() { img.src = imgs[idx].src; cnt.textContent = imgs.length > 1 ? (idx + 1) + ' / ' + imgs.length : ''; prev.hidden = next.hidden = imgs.length < 2; }
+  function go(d) { idx = (idx + d + imgs.length) % imgs.length; show(); }
+  function onKey(e) {
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft' && imgs.length > 1) go(-1);
+    else if (e.key === 'ArrowRight' && imgs.length > 1) go(1);
+  }
+  function close() { lb.remove(); document.removeEventListener('keydown', onKey); if (opener && opener.isConnected) opener.focus(); }
+  document.addEventListener('keydown', onKey);
+  document.body.append(lb);
+  show();
+  x.focus();
+}
+
+// ---------------------------------------------------------------- posts
+function postCard(p, manage, redraw) {
+  const imgs = p.imgs || [];
+  const grid = imgs.length ? h('div', { class: 'pimgs n' + Math.min(imgs.length, 4) }, imgs.map((im, i) =>
+    h('button', { class: 'pimg', type: 'button', 'aria-label': 'View picture ' + (i + 1) + ' larger', onclick: e => openLightbox(p, i, e.currentTarget) },
+      h('img', { src: im.src, alt: p.caption ? 'Website picture: ' + p.caption.slice(0, 90) : 'Website picture', loading: 'lazy', width: im.w, height: im.h })))) : null;
+  let body = null;
+  if (manage) {
+    const t = h('textarea', { rows: 2, maxlength: 600, 'aria-label': 'Caption', placeholder: 'Caption', value: p.caption || '' });
+    t.addEventListener('input', () => { p.caption = t.value; markDirty(); });
+    body = t;
+  } else if (p.caption) body = h('p', { class: 'cap' }, p.caption);
+  return h('article', { class: 'card post' },
+    h('header', {}, h('span', { class: 'av' }, logo(26)),
+      h('div', { class: 'who' }, h('b', {}, S.brand.name), h('span', { class: 'small muted' }, fmtDate(p.date))),
+      manage ? delBtn(() => { S.posts.splice(S.posts.indexOf(p), 1); markDirty(); redraw(); }) : null),
+    (body || grid) ? h('div', { class: 'pbody' }, body, grid) : null);
+}
+function postList(redraw) {
+  return S.posts.map(p => postCard(p, ST.admin, redraw));
+}
+
+function galleryTeaser() {
+  const withPics = S.posts.filter(p => (p.imgs || []).length).slice(0, 3);
+  if (!withPics.length) {
+    if (!ST.admin) return null;
+    return sec('', h('div', { class: 'card todo gtodo' }, h('span', { class: 'k' }, 'Only you see this'), h('h3', {}, 'Post your first website picture'),
+      h('p', { class: 'muted' }, 'This section shows your latest gallery posts. It stays hidden from visitors until you post one.'),
+      h('a', { class: 'btn', href: '#gallery' }, 'Open the gallery', icon('arrow'))));
+  }
+  return sec('', secHead('Gallery', fmt(S.copy.galleryTitle), S.copy.gallerySub, h('a', { class: 'btn', href: '#gallery' }, 'Open the gallery', icon('arrow'))),
+    h('div', { class: 'gthumbs' }, withPics.map(p => h('a', { class: 'card gthumb', href: '#gallery', 'aria-label': 'Open the gallery' },
+      h('img', { src: p.imgs[0].src, alt: p.caption ? 'Website picture: ' + p.caption.slice(0, 90) : 'Website picture', loading: 'lazy' }),
+      p.caption ? h('span', { class: 'gcap' }, p.caption) : null))));
+}
+
+PAGES.gallery = () => {
+  const f = document.createDocumentFragment();
+  const feed = h('div', { class: 'feed' });
+  if (ST.admin) feed.append(pubbar(), composer(renderMain));
+  if (S.posts.length) feed.append(...postList(renderMain));
+  else feed.append(h('div', { class: 'card empty' }, tile('image'), h('h3', {}, 'Nothing posted yet'),
+    h('p', { class: 'muted' }, ST.admin ? 'Use the box above to post your first website picture.' : 'Pictures of the websites I build will show up here. Check back soon, or DM me to get yours started.'),
+    ST.admin ? null : h('a', { class: 'btn dark', href: '#contact' }, 'DM me', icon('arrow'))));
+  const side = h('div', { class: 'sticky' }, goldCard('Want one like these?',
+    h('p', {}, 'Every site is built for one server. Tell me what yours needs and I will send you a quote.'),
+    h('p', { class: 'pmax' }, h('b', {}, usd(S.pricing.min) + ' to ' + usd(S.pricing.max)), ' · Robux or USD'),
+    h('a', { class: 'btn dark block', href: '#quote' }, 'Build your own quote', icon('arrow')),
+    h('a', { class: 'btn block', href: '#contact' }, 'DM me')));
+  f.append(pageHead('# website-showcase', fmt(S.copy.galleryTitle), S.copy.gallerySub, dmBtn('DM me for yours')), sec('', h('div', { class: 'gal-split' }, feed, side)), ctaBand());
+  return f;
+};
+
+// ======================================================================
+// admin: simple editing for the owner and people the owner gives Edit access
+// ======================================================================
+const DEFAULTS = JSON.parse(SAVED.json);
+function deepFill(t, d) {
+  for (const k in d) {
+    if (t[k] == null) t[k] = clone(d[k]);
+    else if (d[k] && typeof d[k] === 'object' && !Array.isArray(d[k]) && typeof t[k] === 'object') deepFill(t[k], d[k]);
+  }
+  return t;
+}
+const settingsText = () => { const o = clone(S); delete o.posts; return JSON.stringify(o, null, 2); };
+
+// ---------------------------------------------------------------- publish
+function buildDoc() {
+  const css = $('#app-style').textContent;
+  const js = $('#app-script').textContent;
+  if (!css || js.length < 5000 || js.indexOf('function buildDoc') < 0) throw Object.assign(new Error('page source unavailable'), { code: 'source_missing' });
+  const data = JSON.stringify(S).split('<').join('\\u003c').split(String.fromCharCode(0x2028)).join('\\u2028').split(String.fromCharCode(0x2029)).join('\\u2029');
+  const name = String(S.brand.name || 'Website').replace(/[<>&"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c]));
+  const close = '</' + 'script>';
+  return '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>' +
+    (RESET_CSS || DEFAULT_RESET) + '</style></head><body>\n' +
+    '<title>' + name + '</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n<link rel="stylesheet" href="' + FONT_URL + '">\n' +
+    '<style id="app-style">' + css + '</style>\n<script type="application/json" id="site-data">' + data + close + '\n<div id="app"></div>\n' +
+    '<script id="app-script">' + js + close + '\n\n</body></html>';
+}
+function saveDraftNow() { clearTimeout(draftTimer); saveDraft(); }
+async function publishNow() {
+  if (ST.publishing) return;
+  if (!ST.cap) { ST.msg = 'Publishing is not available in this view. Open the site from your own Claude account.'; ST.pubError = true; updatePubbar(); return; }
+  ST.publishing = true; ST.msg = ''; ST.pubError = false;
+  updatePubbar();
+  try {
+    saveDraftNow();
+    const doc = buildDoc();
+    await ST.cap.publish(doc);
+    ST.msg = 'Published. The site is reloading with your changes.';
+  } catch (e) {
+    const code = e && e.code;
+    ST.publishing = false; ST.pubError = true;
+    if (['not_writer', 'not_granted', 'consent_required', 'not_declared', 'capability_disabled', 'capability_removed'].includes(code)) {
+      ST.readOnly = true; ST.msg = 'Your account cannot publish changes here. Ask the owner for Edit access.';
+    } else if (code === 'conflict') ST.msg = 'A newer version was published first. The page is reloading. Your edits are kept as a draft you can restore.';
+    else if (code === 'rate_limited') ST.msg = 'Publishing too often. Wait a minute, then publish once.';
+    else if (code === 'too_large') ST.msg = 'The page is too large to publish. Delete some gallery posts and try again.';
+    else if (code === 'source_missing') ST.msg = 'The page could not read its own source, so nothing was published. Ask Claude to apply your changes.';
+    else ST.msg = 'Publishing failed. Try once more.';
+  }
+  updatePubbar();
+}
+function discardChanges() {
+  S = JSON.parse(SAVED.json);
+  ST.dirty = false; ST.msg = ''; ST.pubError = false;
+  ls.del(DRAFT_KEY);
+  applySeason();
+  renderAll();
+}
+
+// ---------------------------------------------------------------- form helpers
+const aid = p => 'a-' + p.replace(/\./g, '-');
+function aField(path, label, o = {}) {
+  const id = aid(path), t = o.type || 'text', cur = pget(S, path);
+  let el;
+  if (t === 'area' || t === 'lines') el = h('textarea', { id, rows: o.rows || 3 });
+  else if (t === 'select') el = h('select', { id }, (typeof o.options === 'function' ? o.options() : o.options).map(([v, l]) => h('option', { value: v }, l)));
+  else el = h('input', { id, type: t, step: t === 'number' ? (o.step || 'any') : null, min: t === 'number' ? '0' : null, maxlength: o.max || null, autocomplete: 'off' });
+  el.value = t === 'lines' ? (cur || []).join('\n') : (cur == null ? '' : cur);
+  el.addEventListener('input', () => {
+    let v = el.value;
+    if (t === 'number') v = v === '' ? '' : +v;
+    if (t === 'lines') v = v.split('\n').map(s => s.trim()).filter(Boolean);
+    pset(S, path, v);
+    markDirty();
+    if (o.after) o.after(v);
+  });
+  return h('label', { class: 'f', for: id }, label, el, o.hint ? h('span', { class: 'hint' }, o.hint) : null);
+}
+function aCheck(path, label, hint) {
+  const id = aid(path);
+  const el = h('input', { id, type: 'checkbox' });
+  el.checked = !!pget(S, path);
+  el.addEventListener('change', () => { pset(S, path, el.checked); markDirty(); });
+  return h('label', { class: 'opt', for: id }, el, h('span', { class: 'grow' }, h('b', {}, label), hint ? h('span', { class: 'muted small' }, hint) : null));
+}
+function aMulti(path, label, options) {
+  const arr = pget(S, path) || [];
+  return h('fieldset', {}, h('legend', {}, label), h('div', { class: 'checks' }, options.map(([v, l]) => {
+    const id = aid(path) + '-' + v;
+    const el = h('input', { id, type: 'checkbox' });
+    el.checked = arr.includes(v);
+    el.addEventListener('change', () => {
+      const cur = new Set(pget(S, path) || []);
+      if (el.checked) cur.add(v); else cur.delete(v);
+      pset(S, path, options.map(x => x[0]).filter(x => cur.has(x)));
+      markDirty();
+    });
+    return h('label', { for: id }, el, l);
+  })));
+}
+function fieldFor(f, path) {
+  if (f.type === 'multi') return aMulti(path, f.label, f.options());
+  const w = aField(path, f.label, f);
+  if (f.type === 'area' || f.type === 'lines') w.style.gridColumn = '1 / -1';
+  return w;
+}
+function delBtn(fn) {
+  let armed = false, t = 0;
+  const b = h('button', {
+    type: 'button', class: 'delbtn', 'aria-label': 'Delete this item',
+    onclick: () => {
+      if (!armed) {
+        armed = true; b.replaceChildren('Sure?'); b.classList.add('armed');
+        t = setTimeout(() => { armed = false; b.replaceChildren(icon('trash')); b.classList.remove('armed'); }, 3000);
+      } else { clearTimeout(t); fn(); }
+    }
+  }, icon('trash'));
+  return b;
+}
+function listEditor(title, path, o) {
+  const arr = pget(S, path);
+  const box = h('section', { class: 'agroup' });
+  box.append(h('div', { class: 'row between' }, h('h3', {}, title),
+    h('button', { class: 'btn sm', type: 'button', onclick: () => { arr.push(o.blank()); markDirty(); renderPane(); } }, icon('plus'), 'Add')));
+  if (o.note) box.append(h('p', { class: 'muted small' }, o.note));
+  arr.forEach((it, i) => {
+    const mv = d => { const j = i + d; if (j < 0 || j >= arr.length) return; [arr[i], arr[j]] = [arr[j], arr[i]]; markDirty(); renderPane(); };
+    box.append(h('div', { class: 'litem' },
+      h('header', {}, h('b', {}, (o.name ? o.name(it, i) : '') || 'Item ' + (i + 1)),
+        h('div', { class: 'mini' },
+          h('button', { type: 'button', 'aria-label': 'Move up', disabled: i === 0, onclick: () => mv(-1) }, icon('up')),
+          h('button', { type: 'button', 'aria-label': 'Move down', disabled: i === arr.length - 1, onclick: () => mv(1) }, icon('down')),
+          delBtn(() => { arr.splice(i, 1); if (o.onRemove) o.onRemove(it); markDirty(); renderPane(); }))),
+      h('div', { class: 'agrid' }, o.fields.map(f => fieldFor(f, path + '.' + i + '.' + f.k)))));
+  });
+  if (!arr.length) box.append(h('p', { class: 'muted' }, o.empty || 'Nothing here yet. Use Add to create the first one.'));
+  return box;
+}
+const group = (title, ...kids) => h('section', { class: 'agroup' }, h('h3', {}, title), ...kids);
+const addonOptions = () => S.addons.map(a => [a.id, a.name]);
+
+// ---------------------------------------------------------------- tabs (third item: owner only)
+const ADMIN_TABS = [
+  ['start', 'Start here', false, 'Overview'],
+  ['gallery', 'Gallery', false, 'Content'], ['season', 'Season', false, 'Content'], ['prices', 'Prices', false, 'Content'], ['faq', 'FAQ', false, 'Content'],
+  ['contact', 'Contact and site', true, 'Settings'], ['access', 'Access and backup', true, 'Settings']
+];
+const TAB_INFO = {
+  start: ['Start here', 'Everything on your website can be changed from this area. Work down the list, or use the menu to jump straight to what you want to edit.'],
+  gallery: ['Gallery', 'Post screenshots of the websites you build. They appear on the Gallery page, newest first.'],
+  season: ['Season', 'Pick the look every visitor sees. One click changes the colors, effects and headline.'],
+  prices: ['Prices', 'Set your price range, the base site price and the add-ons people tick in the quote builder.'],
+  faq: ['FAQ', 'Edit the questions and answers shown on the FAQ page.'],
+  contact: ['Contact and site', 'How people reach you, plus your business name and the notice strip.'],
+  access: ['Access and backup', 'Who can edit this site, and how to back up or restore your settings.']
+};
+
+function paneStart() {
+  const canTab = k => { const t = ADMIN_TABS.find(x => x[0] === k); return !!t && (!t[2] || ST.owner); };
+  const items = [
+    ['Add your Discord username', 'Shown on the Contact page, the footer and the home page. The Discord card stays hidden until you add it.', !!dName(), 'contact'],
+    ['Add your Discord profile link', 'Optional. Adds an "Open my profile" button next to your username.', !!safeUrl(S.contact.discordUrl), 'contact'],
+    ['Check your email address', 'Visitors who prefer email write to this address.', /\S+@\S+\.\S+/.test(S.contact.email || ''), 'contact'],
+    ['Post your first website picture', 'The Gallery page and the home page stay empty for visitors until you post one.', S.posts.length > 0, 'gallery'],
+    ['Check your prices', 'Your price range, base site price and add-ons. Visitors build their quote from these.', S.addons.length > 0 && +S.pricing.max >= +S.pricing.min, 'prices'],
+    ['Open for orders', 'Turn this off in Contact and site to show "Orders are closed right now".', S.brand.open !== false, 'contact'],
+    ['Publish your changes', 'Visitors only see changes after you press Publish changes.', !ST.dirty, null]
+  ];
+  const done = items.filter(i => i[2]).length;
+  return [h('section', { class: 'pcard checklist' },
+    h('header', {}, h('h3', {}, 'Setting up your site'), h('span', { class: 'hk' }, done + ' of ' + items.length + ' done')),
+    h('ul', {}, items.map(([t, d, ok, tab]) => h('li', { class: ok ? 'done' : '' },
+      h('span', { class: 'cmark', 'aria-hidden': 'true' }, ok ? icon('check') : null),
+      h('div', { class: 'cbody' }, h('b', {}, t), h('span', { class: 'muted small' }, d)),
+      tab && canTab(tab) ? h('button', { class: 'btn sm', type: 'button', onclick: () => gotoTab(tab) }, ok ? 'Edit' : 'Open') : null,
+      ok ? h('span', { class: 'sr' }, 'Done') : null))))];
+}
+
+function paneGallery() {
+  return [
+    group('Post a picture', h('p', { class: 'muted small' }, 'Add screenshots of the websites you build. They appear on the Gallery page, newest first. Press Publish changes at the top when you are ready.'), composer(renderPane)),
+    group('Your posts (' + S.posts.length + ')', ...(S.posts.length ? postList(renderPane) : [h('p', { class: 'muted' }, 'No posts yet.')]))
+  ];
+}
+
+function paneSeason() {
+  const cards = h('div', { class: 'scards' }, META.seasons.map(s => h('article', { class: 'card scard' + (liveSeason() === s.id ? ' live' : '') },
+    h('span', { class: 'band-sw' }, h('i', { style: { background: s.dots[0] } }), h('i', { style: { background: s.dots[1] } })),
+    h('div', {}, h('b', {}, s.label), h('p', { class: 'muted small' }, s.desc)),
+    h('div', { class: 'row' },
+      liveSeason() === s.id ? h('span', { class: 'chip hot' }, 'Live') : h('button', { class: 'btn sm primary', type: 'button', onclick: () => setLiveSeason(s.id) }, 'Set live'),
+      h('button', { class: 'btn sm', type: 'button', onclick: () => { setViewSeason(s.id); toast('Previewing ' + s.label + ' on your screen'); } }, 'Preview')))));
+  return [
+    group('Choose the live season', h('p', { class: 'muted' }, 'One click changes the colors, effects and headline for every visitor. Press Publish changes to make it official. Visitors can still preview other looks with the Season button.'), cards),
+    group('Effects', aCheck('season.fx', 'Falling effects', 'Bats, leaves, snow and petals. They switch off automatically for visitors who prefer reduced motion.'))
+  ];
+}
+
+function panePrices() {
+  return [
+    group('Prices',
+      h('div', { class: 'agrid' },
+        aField('pricing.min', 'Lowest price (USD)', { type: 'number' }),
+        aField('pricing.max', 'Highest price (USD)', { type: 'number', hint: 'The most any website costs. A paid domain is billed by the registrar, so it is not counted.' }),
+        aField('pricing.base', 'Base site price (USD)', { type: 'number', hint: 'Every site starts here. Add-ons stack on top.' }),
+        aField('pricing.robuxPerUsd', 'Robux per $1', { type: 'number', hint: 'Used for Robux estimates. Use 0 to hide Robux amounts.' }))),
+    listEditor('Add-ons', 'addons', {
+      name: a => a.name + ' (+' + usd(a.price) + ')', empty: 'No add-ons. The quote builder will only show the base site.',
+      note: 'These are the boxes visitors tick in the quote builder. The total is kept between your lowest and highest price.',
+      blank: () => ({ id: 'addon' + (Date.now() % 100000), name: 'New add-on', price: 2, blurb: '' }),
+      fields: [{ k: 'name', label: 'Name' }, { k: 'price', label: 'Price (USD)', type: 'number' }, { k: 'blurb', label: 'One-line description', type: 'area', rows: 2 }],
+      onRemove: a => { S.features.forEach(f => { if (f.addon === a.id) f.addon = ''; }); ORDER.addons = ORDER.addons.filter(x => x !== a.id); }
+    })
+  ];
+}
+
+function paneFaq() {
+  return [listEditor('Questions', 'faq', { name: f => f.q, blank: () => ({ q: 'New question', a: '' }), note: 'You can use {min}, {max} and {email} in answers. They fill in your price range and contact email.', fields: [{ k: 'q', label: 'Question' }, { k: 'a', label: 'Answer', type: 'area' }] })];
+}
+
+function paneContact() {
+  return [
+    group('How people reach you', h('p', { class: 'muted small' }, 'Sales happen over DM, so the Contact page shows your Discord username and your email.'),
+      h('div', { class: 'agrid' },
+        aField('contact.discordName', 'Discord username', { hint: 'Shown on the Contact page, the footer and the home page. The Discord card stays hidden until you fill this in.' }),
+        aField('contact.email', 'Email', { type: 'email' }),
+        aField('contact.discordUrl', 'Discord profile link (optional)', { type: 'url', hint: 'Adds an "Open my profile" button. In Discord, turn on Developer Mode, right-click yourself, Copy User ID, then use https://discord.com/users/ followed by the ID.' }))),
+    group('Your site', h('div', { class: 'agrid' },
+      aField('brand.name', 'Business name', { after: () => { document.title = S.brand.name; }, hint: 'A name like "YourLocal_DEV\'s Website Development" is shown on two lines in the header.' }),
+      aField('brand.tag', 'Tagline', { hint: 'Shown at the top right of the header.' }),
+      aField('copy.banner', 'Notice strip under the header', { type: 'area', rows: 2, hint: 'Leave it empty to hide the strip.' })),
+      aCheck('brand.open', 'I am taking new orders', 'Turn this off to show "Orders are closed right now" on the home page.'))
+  ];
+}
+
+function paneAccess() {
+  const area = h('textarea', { rows: 5, id: 'import-json', placeholder: 'Paste settings here' });
+  return [
+    group('Who can edit this site',
+      h('p', {}, 'Nobody can sign up for admin access on the website. The only way to become an admin is for you to add them.'),
+      h('ol', { class: 'olist' },
+        h('li', {}, 'Open this site from your Claude account.'),
+        h('li', {}, 'Use Share on this page and add the person with Edit access.'),
+        h('li', {}, 'When they open the site while signed in, an Admin link appears for them. Everyone else sees the normal site.')),
+      h('div', { class: 'tscroll' }, h('table', { class: 'roles' },
+        h('thead', {}, h('tr', {}, ['Role', 'Who', 'Can do'].map(x => h('th', {}, x)))),
+        h('tbody', {},
+          h('tr', {}, h('td', {}, 'Owner'), h('td', {}, 'You'), h('td', {}, 'Everything, including contact details, access and backups.')),
+          h('tr', {}, h('td', {}, 'Admin'), h('td', {}, 'People you give Edit access'), h('td', {}, 'Gallery, season, prices and FAQ. Can publish.')),
+          h('tr', {}, h('td', {}, 'Visitor'), h('td', {}, 'Everyone else'), h('td', {}, 'Browse the site, preview seasons and read how to DM you. Cannot edit or publish.'))))),
+      h('p', { class: 'muted small' }, 'The Contact and Access tabs are hidden from admins, but anyone with Edit access can publish changes to the whole page, so only add people you trust.')),
+    group('Backup and restore', h('p', { class: 'muted small' }, 'Copy your settings as text to keep a backup, or paste a backup to restore it. Gallery pictures are not included, they stay as they are.'),
+      h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', onclick: () => copyText(settingsText(), 'Settings copied') }, icon('copy'), 'Copy settings')),
+      h('label', { class: 'f', for: 'import-json' }, 'Import settings', area),
+      h('div', {}, h('button', { class: 'btn', type: 'button', onclick: () => importSettings(area.value) }, 'Import (then publish)')))
+  ];
+}
+function importSettings(text) {
+  try {
+    const o = JSON.parse(text);
+    if (!o || typeof o !== 'object' || !o.brand || !Array.isArray(o.addons)) throw new Error('shape');
+    delete o.packages;
+    if (!Array.isArray(o.posts)) o.posts = S.posts;
+    S = deepFill(o, clone(DEFAULTS));
+    markDirty(); applySeason(); renderAll(); toast('Settings imported. Publish to make them live.');
+  } catch (e) { toast('That does not look like site settings.'); }
+}
+
+const PANES = { start: paneStart, gallery: paneGallery, season: paneSeason, prices: panePrices, faq: paneFaq, contact: paneContact, access: paneAccess };
+function renderPane() {
+  const p = $('#apane');
+  if (!p) return;
+  const tab = ADMIN_TABS.find(t => t[0] === ST.tab);
+  if (!tab || (tab[2] && !ST.owner)) { ST.tab = 'start'; }
+  const info = TAB_INFO[ST.tab];
+  const hd = $('#ahead');
+  if (hd && info) hd.replaceChildren(h('h1', {}, info[0]), h('p', { class: 'lede' }, info[1]));
+  p.replaceChildren(...PANES[ST.tab]());
+}
+function gotoTab(k) { ST.tab = k; ss.set('yld-tab', k); renderMain(); window.scrollTo(0, 0); }
+
+function pubbar() {
+  const status = ST.readOnly ? 'Read-only. Your account cannot publish.' : (ST.dirty ? 'Unpublished changes. Visitors do not see them yet.' : 'Everything is published.');
+  return h('div', { class: 'pubbar' + (ST.dirty ? ' dirty' : ''), id: 'pubbar', role: 'region', 'aria-label': 'Publish' },
+    h('div', {}, h('b', {}, status), ST.msg ? h('div', { class: 'small muted' }, ST.msg) : null),
+    h('div', { class: 'row' },
+      ST.dirty ? h('button', { class: 'btn sm', type: 'button', disabled: ST.publishing, onclick: discardChanges }, 'Discard') : null,
+      h('button', { class: 'btn primary sm', type: 'button', disabled: !ST.dirty || ST.publishing || ST.readOnly || !ST.cap, onclick: publishNow }, ST.publishing ? 'Publishing...' : 'Publish changes')));
+}
+function updatePubbar() { const old = $('#pubbar'); if (old) old.replaceWith(pubbar()); }
+
+function lockedView() {
+  return sec('', h('div', { class: 'locked' }, h('span', { class: 'chip' }, 'Admin only'),
+    h('h1', {}, 'Admin access is by invitation'),
+    h('p', { class: 'lede' }, 'Only people the site owner adds can edit this site. Nobody can sign up for admin access from the website.'),
+    h('p', { class: 'muted' }, 'Owner? Open this site from your own Claude account and the Admin link appears.'),
+    h('a', { class: 'btn', href: '#home' }, 'Back to the site')));
+}
+
+PAGES.admin = () => {
+  if (!ST.admin) return lockedView();
+  const tabs = ADMIN_TABS.filter(t => !t[2] || ST.owner);
+  if (!tabs.some(t => t[0] === ST.tab)) ST.tab = 'start';
+  const pane = h('div', { class: 'apane', id: 'apane' });
+  const navKids = [];
+  let lastGroup = '';
+  tabs.forEach(([k, label, , grp]) => {
+    if (grp !== lastGroup) { navKids.push(h('p', { class: 'glabel' }, grp)); lastGroup = grp; }
+    navKids.push(h('button', { type: 'button', 'aria-current': ST.tab === k ? 'page' : null, onclick: () => gotoTab(k) }, label));
+  });
+  const nav = h('nav', { class: 'atabs', 'aria-label': 'Admin sections' }, navKids);
+  const draft = ST.draft ? h('div', { class: 'notice' }, h('b', {}, 'You have an unpublished draft from this browser. '),
+    h('div', { class: 'row', style: { marginTop: '.6rem' } },
+      h('button', { class: 'btn sm dark', type: 'button', onclick: () => { S = deepFill(ST.draft, clone(DEFAULTS)); ST.draft = null; markDirty(); applySeason(); renderAll(); toast('Draft restored'); } }, 'Restore draft'),
+      h('button', { class: 'btn sm', type: 'button', onclick: () => { ST.draft = null; ls.del(DRAFT_KEY); renderMain(); } }, 'Throw it away'))) : null;
+  const f = document.createDocumentFragment();
+  f.append(sec('adm-sec', h('div', { class: 'adm' }, nav,
+    h('div', { class: 'amain stack-lg' }, h('div', { class: 'ahead stack', id: 'ahead' }), draft, pubbar(), pane))));
+  queueMicrotask(renderPane);
+  return f;
+};
+
+// ======================================================================
+// boot
+// ======================================================================
+async function initCaps() {
+  let u = null;
+  try { u = await (window.claude && window.claude.use ? window.claude.use('user') : null); } catch (e) { u = null; }
+  if (u) {
+    try { ST.owner = !!(await u.isOwner()); ST.admin = ST.owner || !!(await u.canEdit()); } catch (e) { /* stay a visitor */ }
+  }
+  try { ST.cap = (await (window.claude && window.claude.use ? window.claude.use('artifact') : null)) || null; } catch (e) { ST.cap = null; }
+  if (!ST.admin) return;
+  const raw = ls.get(DRAFT_KEY);
+  if (raw) {
+    if (raw === SAVED.json) ls.del(DRAFT_KEY);
+    else { try { ST.draft = JSON.parse(raw); } catch (e) { ls.del(DRAFT_KEY); } }
+  }
+  if (!ST.cap) ST.msg = 'Publishing is not available in this view. Open the site from your own Claude account.';
+  renderAll();
+}
+
+document.title = S.brand.name;
+applySeason();
+renderAll();
+initCaps();
+
+})();</script>
+</body>
+</html>
